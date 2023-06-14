@@ -1,0 +1,16 @@
+table{
+    border-collapse: collapse;
+    margin:15px;
+}
+td{
+    text-align: center;
+}
+td.ramo{
+    min-width:55px;
+}
+td.folha{
+    min-width:55px;
+}
+.ramo{
+    border-right: 1px solid black;
+}

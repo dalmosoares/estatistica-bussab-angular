@@ -1,0 +1,710 @@
+[
+{
+	"mes":1,
+	"dia":2,
+	"telebras":34.99,
+	"indice":43.19
+},
+{
+	"mes":1,
+	"dia":4,
+	"telebras":32.09,
+	"indice":39.68
+},
+{
+	"mes":1,
+	"dia":5,
+	"telebras":32.56,
+	"indice":40.37
+},
+{
+	"mes":1,
+	"dia":6,
+	"telebras":30.31,
+	"indice":38.27
+},
+{
+	"mes":1,
+	"dia":9,
+	"telebras":28.91,
+	"indice":36.28
+},
+{
+	"mes":1,
+	"dia":10,
+	"telebras":26.1,
+	"indice":32.7
+},
+{
+	"mes":1,
+	"dia":11,
+	"telebras":28.25,
+	"indice":34.99
+},
+{
+	"mes":1,
+	"dia":12,
+	"telebras":30.41,
+	"indice":38.41
+},
+{
+	"mes":1,
+	"dia":13,
+	"telebras":32,
+	"indice":41.04
+},
+{
+	"mes":1,
+	"dia":16,
+	"telebras":31.25,
+	"indice":40.56
+},
+{
+	"mes":1,
+	"dia":17,
+	"telebras":32.37,
+	"indice":42.1
+},
+{
+	"mes":1,
+	"dia":18,
+	"telebras":30.87,
+	"indice":40.79
+},
+{
+	"mes":1,
+	"dia":19,
+	"telebras":28.63,
+	"indice":38.09
+},
+{
+	"mes":1,
+	"dia":20,
+	"telebras":29.56,
+	"indice":38.62
+},
+{
+	"mes":1,
+	"dia":23,
+	"telebras":28.44,
+	"indice":37.58
+},
+{
+	"mes":1,
+	"dia":24,
+	"telebras":29.28,
+	"indice":38.4
+},
+{
+	"mes":1,
+	"dia":26,
+	"telebras":29.84,
+	"indice":39.27
+},
+{
+	"mes":1,
+	"dia":27,
+	"telebras":28.35,
+	"indice":37.84
+},
+{
+	"mes":1,
+	"dia":30,
+	"telebras":27.32,
+	"indice":35.81
+},
+{
+	"mes":1,
+	"dia":31,
+	"telebras":30.41,
+	"indice":38.85
+},
+{
+	"mes":2,
+	"dia":1,
+	"telebras":31.34,
+	"indice":39.9
+},
+{
+	"mes":2,
+	"dia":2,
+	"telebras":30.78,
+	"indice":38.98
+},
+{
+	"mes":2,
+	"dia":3,
+	"telebras":31.44,
+	"indice":39.44
+},
+{
+	"mes":2,
+	"dia":6,
+	"telebras":30.59,
+	"indice":38.3
+},
+{
+	"mes":2,
+	"dia":7,
+	"telebras":28.63,
+	"indice":36.37
+},
+{
+	"mes":2,
+	"dia":8,
+	"telebras":27.6,
+	"indice":35.56
+},
+{
+	"mes":2,
+	"dia":9,
+	"telebras":26.38,
+	"indice":34.01
+},
+{
+	"mes":2,
+	"dia":10,
+	"telebras":25.26,
+	"indice":33.08
+},
+{
+	"mes":2,
+	"dia":13,
+	"telebras":24.98,
+	"indice":32.95
+},
+{
+	"mes":2,
+	"dia":14,
+	"telebras":24.56,
+	"indice":31.92
+},
+{
+	"mes":2,
+	"dia":15,
+	"telebras":23.02,
+	"indice":30.69
+},
+{
+	"mes":2,
+	"dia":16,
+	"telebras":20.96,
+	"indice":28.64
+},
+{
+	"mes":2,
+	"dia":17,
+	"telebras":22.45,
+	"indice":30.23
+},
+{
+	"mes":2,
+	"dia":20,
+	"telebras":21.61,
+	"indice":29.62
+},
+{
+	"mes":2,
+	"dia":21,
+	"telebras":19.74,
+	"indice":27.93
+},
+{
+	"mes":2,
+	"dia":22,
+	"telebras":20.49,
+	"indice":28.72
+},
+{
+	"mes":2,
+	"dia":23,
+	"telebras":23.02,
+	"indice":32.17
+},
+{
+	"mes":2,
+	"dia":24,
+	"telebras":23.48,
+	"indice":32.71
+},
+{
+	"mes":3,
+	"dia":2,
+	"telebras":20.96,
+	"indice":29.89
+},
+{
+	"mes":3,
+	"dia":6,
+	"telebras":20.4,
+	"indice":28.67
+},
+{
+	"mes":3,
+	"dia":7,
+	"telebras":18.43,
+	"indice":26.16
+},
+{
+	"mes":3,
+	"dia":8,
+	"telebras":16.84,
+	"indice":23.63
+},
+{
+	"mes":3,
+	"dia":9,
+	"telebras":15.06,
+	"indice":21.38
+},
+{
+	"mes":3,
+	"dia":10,
+	"telebras":21.05,
+	"indice":26.86
+},
+{
+	"mes":3,
+	"dia":13,
+	"telebras":20.77,
+	"indice":26.71
+},
+{
+	"mes":3,
+	"dia":14,
+	"telebras":23.3,
+	"indice":30.17
+},
+{
+	"mes":3,
+	"dia":15,
+	"telebras":21.99,
+	"indice":29.39
+},
+{
+	"mes":3,
+	"dia":16,
+	"telebras":23.75,
+	"indice":31.42
+},
+{
+	"mes":3,
+	"dia":17,
+	"telebras":22.08,
+	"indice":29.81
+},
+{
+	"mes":3,
+	"dia":20,
+	"telebras":21.14,
+	"indice":28.7
+},
+{
+	"mes":3,
+	"dia":21,
+	"telebras":22.45,
+	"indice":30.06
+},
+{
+	"mes":3,
+	"dia":22,
+	"telebras":22.36,
+	"indice":30.04
+},
+{
+	"mes":3,
+	"dia":23,
+	"telebras":23.67,
+	"indice":31.46
+},
+{
+	"mes":3,
+	"dia":24,
+	"telebras":25.63,
+	"indice":33.61
+},
+{
+	"mes":3,
+	"dia":27,
+	"telebras":25.73,
+	"indice":33.72
+},
+{
+	"mes":3,
+	"dia":28,
+	"telebras":24.61,
+	"indice":32.56
+},
+{
+	"mes":3,
+	"dia":29,
+	"telebras":24.51,
+	"indice":31.98
+},
+{
+	"mes":3,
+	"dia":30,
+	"telebras":22.13,
+	"indice":31.26
+},
+{
+	"mes":3,
+	"dia":31,
+	"telebras":22.64,
+	"indice":29.79
+},
+{
+	"mes":4,
+	"dia":3,
+	"telebras":22.08,
+	"indice":28.94
+},
+{
+	"mes":4,
+	"dia":4,
+	"telebras":24.33,
+	"indice":31.25
+},
+{
+	"mes":4,
+	"dia":5,
+	"telebras":24.98,
+	"indice":31.8
+},
+{
+	"mes":4,
+	"dia":6,
+	"telebras":25.54,
+	"indice":32.54
+},
+{
+	"mes":4,
+	"dia":7,
+	"telebras":25.35,
+	"indice":31.92
+},
+{
+	"mes":4,
+	"dia":10,
+	"telebras":24.79,
+	"indice":31.14
+},
+{
+	"mes":4,
+	"dia":11,
+	"telebras":24.23,
+	"indice":30.18
+},
+{
+	"mes":4,
+	"dia":12,
+	"telebras":23.95,
+	"indice":30.21
+},
+{
+	"mes":4,
+	"dia":17,
+	"telebras":24.89,
+	"indice":31.13
+},
+{
+	"mes":4,
+	"dia":18,
+	"telebras":25.82,
+	"indice":31.94
+},
+{
+	"mes":4,
+	"dia":19,
+	"telebras":27.23,
+	"indice":33.31
+},
+{
+	"mes":4,
+	"dia":20,
+	"telebras":27.79,
+	"indice":33.84
+},
+{
+	"mes":4,
+	"dia":24,
+	"telebras":29,
+	"indice":35.13
+},
+{
+	"mes":4,
+	"dia":25,
+	"telebras":30.13,
+	"indice":36.99
+},
+{
+	"mes":4,
+	"dia":26,
+	"telebras":30.69,
+	"indice":38.26
+},
+{
+	"mes":4,
+	"dia":27,
+	"telebras":31.06,
+	"indice":38.51
+},
+{
+	"mes":4,
+	"dia":28,
+	"telebras":30.86,
+	"indice":38.14
+},
+{
+	"mes":5,
+	"dia":2,
+	"telebras":31.23,
+	"indice":38.62
+},
+{
+	"mes":5,
+	"dia":3,
+	"telebras":31.99,
+	"indice":39.76
+},
+{
+	"mes":5,
+	"dia":4,
+	"telebras":32.41,
+	"indice":40.44
+},
+{
+	"mes":5,
+	"dia":5,
+	"telebras":31.71,
+	"indice":40.08
+},
+{
+	"mes":5,
+	"dia":8,
+	"telebras":30.86,
+	"indice":39.14
+},
+{
+	"mes":5,
+	"dia":9,
+	"telebras":32.23,
+	"indice":40.65
+},
+{
+	"mes":5,
+	"dia":10,
+	"telebras":31.9,
+	"indice":40.5
+},
+{
+	"mes":5,
+	"dia":11,
+	"telebras":30.62,
+	"indice":39.51
+},
+{
+	"mes":5,
+	"dia":12,
+	"telebras":30.95,
+	"indice":39.98
+},
+{
+	"mes":5,
+	"dia":15,
+	"telebras":29.91,
+	"indice":38.94
+},
+{
+	"mes":5,
+	"dia":16,
+	"telebras":29.63,
+	"indice":38.35
+},
+{
+	"mes":5,
+	"dia":17,
+	"telebras":31.14,
+	"indice":39.64
+},
+{
+	"mes":5,
+	"dia":18,
+	"telebras":31.23,
+	"indice":40.08
+},
+{
+	"mes":5,
+	"dia":19,
+	"telebras":30.81,
+	"indice":39.5
+},
+{
+	"mes":5,
+	"dia":22,
+	"telebras":31.99,
+	"indice":40.34
+},
+{
+	"mes":5,
+	"dia":23,
+	"telebras":32.56,
+	"indice":40.88
+},
+{
+	"mes":5,
+	"dia":24,
+	"telebras":33.31,
+	"indice":41
+},
+{
+	"mes":5,
+	"dia":25,
+	"telebras":32.37,
+	"indice":40.19
+},
+{
+	"mes":5,
+	"dia":26,
+	"telebras":30.27,
+	"indice":39.05
+},
+{
+	"mes":5,
+	"dia":29,
+	"telebras":30.91,
+	"indice":38.96
+},
+{
+	"mes":5,
+	"dia":30,
+	"telebras":28.71,
+	"indice":37.07
+},
+{
+	"mes":5,
+	"dia":31,
+	"telebras":28.98,
+	"indice":37.21
+},
+{
+	"mes":6,
+	"dia":1,
+	"telebras":29.53,
+	"indice":37.74
+},
+{
+	"mes":6,
+	"dia":2,
+	"telebras":30.91,
+	"indice":39.66
+},
+{
+	"mes":6,
+	"dia":5,
+	"telebras":31.5,
+	"indice":40.63
+},
+{
+	"mes":6,
+	"dia":6,
+	"telebras":30.36,
+	"indice":39.33
+},
+{
+	"mes":6,
+	"dia":7,
+	"telebras":29.07,
+	"indice":38.08
+},
+{
+	"mes":6,
+	"dia":8,
+	"telebras":29.01,
+	"indice":38.18
+},
+{
+	"mes":6,
+	"dia":9,
+	"telebras":27.51,
+	"indice":36.71
+},
+{
+	"mes":6,
+	"dia":12,
+	"telebras":28.16,
+	"indice":37.05
+},
+{
+	"mes":6,
+	"dia":13,
+	"telebras":29.42,
+	"indice":37.89
+},
+{
+	"mes":6,
+	"dia":14,
+	"telebras":27.88,
+	"indice":36.65
+},
+{
+	"mes":6,
+	"dia":16,
+	"telebras":28.48,
+	"indice":37.18
+},
+{
+	"mes":6,
+	"dia":19,
+	"telebras":28.57,
+	"indice":36.96
+},
+{
+	"mes":6,
+	"dia":20,
+	"telebras":27.15,
+	"indice":35.77
+},
+{
+	"mes":6,
+	"dia":21,
+	"telebras":27.88,
+	"indice":36.32
+},
+{
+	"mes":6,
+	"dia":22,
+	"telebras":27.7,
+	"indice":35.99
+},
+{
+	"mes":6,
+	"dia":23,
+	"telebras":27.74,
+	"indice":35.86
+},
+{
+	"mes":6,
+	"dia":26,
+	"telebras":27.65,
+	"indice":35.37
+},
+{
+	"mes":6,
+	"dia":27,
+	"telebras":28.8,
+	"indice":36.61
+},
+{
+	"mes":6,
+	"dia":28,
+	"telebras":29.21,
+	"indice":37.15
+},
+{
+	"mes":6,
+	"dia":29,
+	"telebras":28.62,
+	"indice":36.78
+}
+]

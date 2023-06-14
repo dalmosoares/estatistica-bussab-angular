@@ -1,0 +1,210 @@
+[
+{
+	"sujeito":1,
+	"sexo":"F",
+	"huggerAntes":2.18,
+	"huggerDepois":0.43,
+	"convencionalAntes":1.2,
+	"convencionalDepois":0.75
+},
+{
+	"sujeito":2,
+	"sexo":"F",
+	"huggerAntes":2.05,
+	"huggerDepois":0.08,
+	"convencionalAntes":1.43,
+	"convencionalDepois":0.55
+},
+{
+	"sujeito":3,
+	"sexo":"F",
+	"huggerAntes":1.05,
+	"huggerDepois":0.18,
+	"convencionalAntes":0.68,
+	"convencionalDepois":0.08
+},
+{
+	"sujeito":4,
+	"sexo":"F",
+	"huggerAntes":1.95,
+	"huggerDepois":0.78,
+	"convencionalAntes":1.45,
+	"convencionalDepois":0.75
+},
+{
+	"sujeito":5,
+	"sexo":"F",
+	"huggerAntes":0.28,
+	"huggerDepois":0.03,
+	"convencionalAntes":0.5,
+	"convencionalDepois":0.05
+},
+{
+	"sujeito":6,
+	"sexo":"F",
+	"huggerAntes":2.63,
+	"huggerDepois":0.23,
+	"convencionalAntes":2.75,
+	"convencionalDepois":1.6
+},
+{
+	"sujeito":7,
+	"sexo":"F",
+	"huggerAntes":1.5,
+	"huggerDepois":0.2,
+	"convencionalAntes":1.25,
+	"convencionalDepois":0.65
+},
+{
+	"sujeito":8,
+	"sexo":"F",
+	"huggerAntes":0.45,
+	"huggerDepois":0,
+	"convencionalAntes":0.4,
+	"convencionalDepois":0.13
+},
+{
+	"sujeito":9,
+	"sexo":"F",
+	"huggerAntes":0.7,
+	"huggerDepois":0.05,
+	"convencionalAntes":1.18,
+	"convencionalDepois":0.83
+},
+{
+	"sujeito":10,
+	"sexo":"F",
+	"huggerAntes":1.3,
+	"huggerDepois":0.3,
+	"convencionalAntes":1.43,
+	"convencionalDepois":0.58
+},
+{
+	"sujeito":11,
+	"sexo":"F",
+	"huggerAntes":1.25,
+	"huggerDepois":0.33,
+	"convencionalAntes":0.45,
+	"convencionalDepois":0.38
+},
+{
+	"sujeito":12,
+	"sexo":"F",
+	"huggerAntes":0.18,
+	"huggerDepois":0,
+	"convencionalAntes":1.6,
+	"convencionalDepois":0.63
+},
+{
+	"sujeito":13,
+	"sexo":"F",
+	"huggerAntes":3.3,
+	"huggerDepois":0.9,
+	"convencionalAntes":0.25,
+	"convencionalDepois":0.25
+},
+{
+	"sujeito":14,
+	"sexo":"F",
+	"huggerAntes":1.4,
+	"huggerDepois":0.24,
+	"convencionalAntes":2.98,
+	"convencionalDepois":1.03
+},
+{
+	"sujeito":15,
+	"sexo":"M",
+	"huggerAntes":0.9,
+	"huggerDepois":0.15,
+	"convencionalAntes":3.35,
+	"convencionalDepois":1.58
+},
+{
+	"sujeito":16,
+	"sexo":"M",
+	"huggerAntes":0.58,
+	"huggerDepois":0.1,
+	"convencionalAntes":1.5,
+	"convencionalDepois":0.2
+},
+{
+	"sujeito":17,
+	"sexo":"M",
+	"huggerAntes":2.5,
+	"huggerDepois":0.33,
+	"convencionalAntes":4.08,
+	"convencionalDepois":1.88
+},
+{
+	"sujeito":18,
+	"sexo":"M",
+	"huggerAntes":2.25,
+	"huggerDepois":0.33,
+	"convencionalAntes":3.15,
+	"convencionalDepois":2
+},
+{
+	"sujeito":19,
+	"sexo":"M",
+	"huggerAntes":1.53,
+	"huggerDepois":0.53,
+	"convencionalAntes":0.9,
+	"convencionalDepois":0.25
+},
+{
+	"sujeito":20,
+	"sexo":"M",
+	"huggerAntes":1.43,
+	"huggerDepois":0.43,
+	"convencionalAntes":1.78,
+	"convencionalDepois":0.18
+},
+{
+	"sujeito":21,
+	"sexo":"M",
+	"huggerAntes":3.48,
+	"huggerDepois":0.65,
+	"convencionalAntes":3.5,
+	"convencionalDepois":0.85
+},
+{
+	"sujeito":22,
+	"sexo":"M",
+	"huggerAntes":1.8,
+	"huggerDepois":0.2,
+	"convencionalAntes":2.5,
+	"convencionalDepois":1.15
+},
+{
+	"sujeito":23,
+	"sexo":"M",
+	"huggerAntes":1.5,
+	"huggerDepois":0.25,
+	"convencionalAntes":2.18,
+	"convencionalDepois":0.93
+},
+{
+	"sujeito":24,
+	"sexo":"M",
+	"huggerAntes":2.55,
+	"huggerDepois":0.15,
+	"convencionalAntes":2.68,
+	"convencionalDepois":1.05
+},
+{
+	"sujeito":25,
+	"sexo":"M",
+	"huggerAntes":1.3,
+	"huggerDepois":0.05,
+	"convencionalAntes":2.73,
+	"convencionalDepois":0.85
+},
+{
+	"sujeito":26,
+	"sexo":"M",
+	"huggerAntes":2.65,
+	"huggerDepois":0.25,
+	"convencionalAntes":3.43,
+	"convencionalDepois":0.88
+}
+]

@@ -1,0 +1,290 @@
+[
+{
+	"pais":"Afeganistão",
+	"emissao":0.02
+},
+{
+	"pais":"Albânia",
+	"emissao":0.15
+},
+{
+	"pais":"Algéria",
+	"emissao":0.89
+},
+{
+	"pais":"Angola",
+	"emissao":0.12
+},
+{
+	"pais":"Argentina",
+	"emissao":1.02
+},
+{
+	"pais":"Armênia",
+	"emissao":0.27
+},
+{
+	"pais":"Austrália",
+	"emissao":4.43
+},
+{
+	"pais":"Áustria",
+	"emissao":2.01
+},
+{
+	"pais":"Azerbaijão",
+	"emissao":1.54
+},
+{
+	"pais":"Camboja",
+	"emissao":0.01
+},
+{
+	"pais":"Camarões",
+	"emissao":0.09
+},
+{
+	"pais":"Canadá",
+	"emissao":4.04
+},
+{
+	"pais":"África Central",
+	"emissao":0.02
+},
+{
+	"pais":"Chade",
+	"emissao":0
+},
+{
+	"pais":"Chile",
+	"emissao":0.85
+},
+{
+	"pais":"China",
+	"emissao":0.71
+},
+{
+	"pais":"Colômbia",
+	"emissao":0.51
+},
+{
+	"pais":"Congo",
+	"emissao":0.13
+},
+{
+	"pais":"Rep",
+	"emissao":" Congo"
+},
+{
+	"pais":"Costa Rica",
+	"emissao":0.42
+},
+{
+	"pais":"Costa Marfim",
+	"emissao":0.21
+},
+{
+	"pais":"Croácia",
+	"emissao":1.03
+},
+{
+	"pais":"Cuba",
+	"emissao":0.72
+},
+{
+	"pais":"Rep",
+	"emissao":" Tcheca"
+},
+{
+	"pais":"Equador",
+	"emissao":0.54
+},
+{
+	"pais":"Egito",
+	"emissao":0.4
+},
+{
+	"pais":"El Salvador",
+	"emissao":0.25
+},
+{
+	"pais":"Estônia",
+	"emissao":3.02
+},
+{
+	"pais":"Etiópia",
+	"emissao":0.06
+},
+{
+	"pais":"Gabão",
+	"emissao":0.9
+},
+{
+	"pais":"Gâmbia",
+	"emissao":0.05
+},
+{
+	"pais":"Geórgia",
+	"emissao":0.39
+},
+{
+	"pais":"Alemanha",
+	"emissao":2.79
+},
+{
+	"pais":"Gana",
+	"emissao":0.06
+},
+{
+	"pais":"Grécia",
+	"emissao":1.99
+},
+{
+	"pais":"Guatemala",
+	"emissao":0.18
+},
+{
+	"pais":"Guiné",
+	"emissao":0.04
+},
+{
+	"pais":"Guiné-Bissau",
+	"emissao":0.06
+},
+{
+	"pais":"India",
+	"emissao":0.27
+},
+{
+	"pais":"Indonésia",
+	"emissao":0.41
+},
+{
+	"pais":"Irã",
+	"emissao":1.05
+},
+{
+	"pais":"Iraque",
+	"emissao":1.34
+},
+{
+	"pais":"Irlanda",
+	"emissao":2.48
+},
+{
+	"pais":"Israel",
+	"emissao":2
+},
+{
+	"pais":"Itália",
+	"emissao":1.96
+},
+{
+	"pais":"Cazaquistão",
+	"emissao":3.59
+},
+{
+	"pais":"Quênia",
+	"emissao":0.07
+},
+{
+	"pais":"Kuait",
+	"emissao":7.86
+},
+{
+	"pais":"Quirguistão",
+	"emissao":0.33
+},
+{
+	"pais":"Madagascar",
+	"emissao":0.02
+},
+{
+	"pais":"Malaui",
+	"emissao":0.02
+},
+{
+	"pais":"Malásia",
+	"emissao":1.44
+},
+{
+	"pais":"Mali",
+	"emissao":0.01
+},
+{
+	"pais":"Mauritânia",
+	"emissao":0.37
+},
+{
+	"pais":"Maurício",
+	"emissao":0.36
+},
+{
+	"pais":"México",
+	"emissao":1.07
+},
+{
+	"pais":"Moldávia",
+	"emissao":0.67
+},
+{
+	"pais":"Mongólia",
+	"emissao":0.94
+},
+{
+	"pais":"Marrocos",
+	"emissao":0.3
+},
+{
+	"pais":"Moçambique",
+	"emissao":0.02
+},
+{
+	"pais":"Myanma",
+	"emissao":0.04
+},
+{
+	"pais":"Omã",
+	"emissao":1.41
+},
+{
+	"pais":"Romênia",
+	"emissao":1.45
+},
+{
+	"pais":"Rússia",
+	"emissao":3.34
+},
+{
+	"pais":"Ruanda",
+	"emissao":0.03
+},
+{
+	"pais":"Tadjiquistão",
+	"emissao":0.18
+},
+{
+	"pais":"Tanzânia",
+	"emissao":0.02
+},
+{
+	"pais":"Uganda",
+	"emissao":0.01
+},
+{
+	"pais":"Ucrânia",
+	"emissao":2.31
+},
+{
+	"pais":"Emirados Árabes",
+	"emissao":8.44
+},
+{
+	"pais":"Reino Unido",
+	"emissao":2.55
+},
+{
+	"pais":"Estados Unidos",
+	"emissao":5.27
+}
+]

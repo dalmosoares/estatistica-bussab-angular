@@ -1,0 +1,19 @@
+<mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+  
+  <mat-tree-node *matTreeNodeDef="let item" matTreeNodePadding matTreeNodePaddingIndent="{{padding}}"> 
+    <button  
+    (click)="ativar(item)" [ngClass]="{ 'ativado': activeNode === item }"
+    mat-icon-button>{{item.nome}}</button>
+  </mat-tree-node>
+  
+  <mat-tree-node *matTreeNodeDef="let item;when: hasChild" matTreeNodePadding matTreeNodePaddingIndent="{{padding}}">
+    <button (click)="ativar(item)" [ngClass]="{ 'ativado': activeNode === item }"
+      mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + item.id">
+      <mat-icon class="mat-icon-rtl-mirror">
+        {{treeControl.isExpanded(item) ? 'expand_more' : 'chevron_right'}}
+      </mat-icon>
+      {{item.nome}}
+    </button>
+  </mat-tree-node>
+
+</mat-tree>

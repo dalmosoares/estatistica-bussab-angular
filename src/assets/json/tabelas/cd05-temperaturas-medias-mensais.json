@@ -1,0 +1,602 @@
+[
+{
+	"ano":1976,
+	"cananeia":25.2,
+	"ubatuba":27.1
+},
+{
+	"ano":1976,
+	"cananeia":24.3,
+	"ubatuba":25.3
+},
+{
+	"ano":1976,
+	"cananeia":24.2,
+	"ubatuba":25.8
+},
+{
+	"ano":1976,
+	"cananeia":21.4,
+	"ubatuba":23.7
+},
+{
+	"ano":1976,
+	"cananeia":19.8,
+	"ubatuba":21.6
+},
+{
+	"ano":1976,
+	"cananeia":17,
+	"ubatuba":20
+},
+{
+	"ano":1976,
+	"cananeia":17.2,
+	"ubatuba":19.3
+},
+{
+	"ano":1976,
+	"cananeia":17.6,
+	"ubatuba":20.2
+},
+{
+	"ano":1976,
+	"cananeia":20.2,
+	"ubatuba":20.2
+},
+{
+	"ano":1976,
+	"cananeia":21.6,
+	"ubatuba":21.3
+},
+{
+	"ano":1976,
+	"cananeia":22.5,
+	"ubatuba":23.7
+},
+{
+	"ano":1976,
+	"cananeia":24,
+	"ubatuba":25.5
+},
+{
+	"ano":1977,
+	"cananeia":25.3,
+	"ubatuba":26.4
+},
+{
+	"ano":1977,
+	"cananeia":26.4,
+	"ubatuba":27.4
+},
+{
+	"ano":1977,
+	"cananeia":24.9,
+	"ubatuba":26.3
+},
+{
+	"ano":1977,
+	"cananeia":21.8,
+	"ubatuba":23.8
+},
+{
+	"ano":1977,
+	"cananeia":21,
+	"ubatuba":22.3
+},
+{
+	"ano":1977,
+	"cananeia":19.3,
+	"ubatuba":20.8
+},
+{
+	"ano":1977,
+	"cananeia":20.8,
+	"ubatuba":22.6
+},
+{
+	"ano":1977,
+	"cananeia":19.6,
+	"ubatuba":21.6
+},
+{
+	"ano":1977,
+	"cananeia":20.2,
+	"ubatuba":21.6
+},
+{
+	"ano":1977,
+	"cananeia":21.6,
+	"ubatuba":22.5
+},
+{
+	"ano":1977,
+	"cananeia":22.5,
+	"ubatuba":23.3
+},
+{
+	"ano":1977,
+	"cananeia":24,
+	"ubatuba":24.1
+},
+{
+	"ano":1978,
+	"cananeia":24.8,
+	"ubatuba":25.9
+},
+{
+	"ano":1978,
+	"cananeia":25.2,
+	"ubatuba":25.8
+},
+{
+	"ano":1978,
+	"cananeia":24.3,
+	"ubatuba":25.5
+},
+{
+	"ano":1978,
+	"cananeia":21.6,
+	"ubatuba":22.9
+},
+{
+	"ano":1978,
+	"cananeia":19.2,
+	"ubatuba":21.5
+},
+{
+	"ano":1978,
+	"cananeia":17.4,
+	"ubatuba":19.8
+},
+{
+	"ano":1978,
+	"cananeia":18.9,
+	"ubatuba":21.4
+},
+{
+	"ano":1978,
+	"cananeia":17.5,
+	"ubatuba":20.8
+},
+{
+	"ano":1978,
+	"cananeia":19.7,
+	"ubatuba":21.8
+},
+{
+	"ano":1978,
+	"cananeia":21.6,
+	"ubatuba":22.3
+},
+{
+	"ano":1978,
+	"cananeia":22.9,
+	"ubatuba":23.7
+},
+{
+	"ano":1978,
+	"cananeia":23.9,
+	"ubatuba":24.7
+},
+{
+	"ano":1979,
+	"cananeia":22.9,
+	"ubatuba":24
+},
+{
+	"ano":1979,
+	"cananeia":24.5,
+	"ubatuba":25.3
+},
+{
+	"ano":1979,
+	"cananeia":23.2,
+	"ubatuba":24.2
+},
+{
+	"ano":1979,
+	"cananeia":21.8,
+	"ubatuba":23.2
+},
+{
+	"ano":1979,
+	"cananeia":19.3,
+	"ubatuba":22.3
+},
+{
+	"ano":1979,
+	"cananeia":16.6,
+	"ubatuba":19.6
+},
+{
+	"ano":1979,
+	"cananeia":16.5,
+	"ubatuba":19.2
+},
+{
+	"ano":1979,
+	"cananeia":18.8,
+	"ubatuba":21.7
+},
+{
+	"ano":1979,
+	"cananeia":18.1,
+	"ubatuba":20.5
+},
+{
+	"ano":1979,
+	"cananeia":22,
+	"ubatuba":22.5
+},
+{
+	"ano":1979,
+	"cananeia":21.7,
+	"ubatuba":22.5
+},
+{
+	"ano":1979,
+	"cananeia":24.1,
+	"ubatuba":24.5
+},
+{
+	"ano":1980,
+	"cananeia":24.4,
+	"ubatuba":26.1
+},
+{
+	"ano":1980,
+	"cananeia":25,
+	"ubatuba":26.6
+},
+{
+	"ano":1980,
+	"cananeia":26.4,
+	"ubatuba":27.7
+},
+{
+	"ano":1980,
+	"cananeia":23.6,
+	"ubatuba":24.4
+},
+{
+	"ano":1980,
+	"cananeia":21.7,
+	"ubatuba":23
+},
+{
+	"ano":1980,
+	"cananeia":18.2,
+	"ubatuba":20.5
+},
+{
+	"ano":1980,
+	"cananeia":17.6,
+	"ubatuba":20.1
+},
+{
+	"ano":1980,
+	"cananeia":17.8,
+	"ubatuba":20.3
+},
+{
+	"ano":1980,
+	"cananeia":17.3,
+	"ubatuba":19.7
+},
+{
+	"ano":1980,
+	"cananeia":20.2,
+	"ubatuba":21.5
+},
+{
+	"ano":1980,
+	"cananeia":22.2,
+	"ubatuba":22.6
+},
+{
+	"ano":1980,
+	"cananeia":24.6,
+	"ubatuba":25.6
+},
+{
+	"ano":1981,
+	"cananeia":25,
+	"ubatuba":25.9
+},
+{
+	"ano":1981,
+	"cananeia":26.2,
+	"ubatuba":27
+},
+{
+	"ano":1981,
+	"cananeia":24.3,
+	"ubatuba":24.7
+},
+{
+	"ano":1981,
+	"cananeia":22.3,
+	"ubatuba":22.9
+},
+{
+	"ano":1981,
+	"cananeia":21.9,
+	"ubatuba":22.3
+},
+{
+	"ano":1981,
+	"cananeia":18.2,
+	"ubatuba":19.9
+},
+{
+	"ano":1981,
+	"cananeia":17.1,
+	"ubatuba":19
+},
+{
+	"ano":1981,
+	"cananeia":18,
+	"ubatuba":20.2
+},
+{
+	"ano":1981,
+	"cananeia":19.5,
+	"ubatuba":21.4
+},
+{
+	"ano":1981,
+	"cananeia":19.4,
+	"ubatuba":20.7
+},
+{
+	"ano":1981,
+	"cananeia":23.2,
+	"ubatuba":23.4
+},
+{
+	"ano":1981,
+	"cananeia":23.6,
+	"ubatuba":23.8
+},
+{
+	"ano":1982,
+	"cananeia":23.8,
+	"ubatuba":24.3
+},
+{
+	"ano":1982,
+	"cananeia":25,
+	"ubatuba":25.9
+},
+{
+	"ano":1982,
+	"cananeia":23.9,
+	"ubatuba":23.7
+},
+{
+	"ano":1982,
+	"cananeia":21.6,
+	"ubatuba":22.1
+},
+{
+	"ano":1982,
+	"cananeia":19.9,
+	"ubatuba":20.1
+},
+{
+	"ano":1982,
+	"cananeia":20.3,
+	"ubatuba":20.3
+},
+{
+	"ano":1982,
+	"cananeia":18.8,
+	"ubatuba":20.3
+},
+{
+	"ano":1982,
+	"cananeia":18.7,
+	"ubatuba":20.8
+},
+{
+	"ano":1982,
+	"cananeia":19.7,
+	"ubatuba":20.8
+},
+{
+	"ano":1982,
+	"cananeia":20.6,
+	"ubatuba":21.5
+},
+{
+	"ano":1982,
+	"cananeia":22.4,
+	"ubatuba":24.3
+},
+{
+	"ano":1982,
+	"cananeia":23.8,
+	"ubatuba":23.8
+},
+{
+	"ano":1983,
+	"cananeia":25.9,
+	"ubatuba":26.4
+},
+{
+	"ano":1983,
+	"cananeia":25.9,
+	"ubatuba":26.6
+},
+{
+	"ano":1983,
+	"cananeia":24.1,
+	"ubatuba":23.5
+},
+{
+	"ano":1983,
+	"cananeia":22.6,
+	"ubatuba":18.9
+},
+{
+	"ano":1983,
+	"cananeia":20.9,
+	"ubatuba":18
+},
+{
+	"ano":1983,
+	"cananeia":16.9,
+	"ubatuba":15.3
+},
+{
+	"ano":1983,
+	"cananeia":17.2,
+	"ubatuba":14.7
+},
+{
+	"ano":1983,
+	"cananeia":17.9,
+	"ubatuba":14.4
+},
+{
+	"ano":1983,
+	"cananeia":17.1,
+	"ubatuba":16.2
+},
+{
+	"ano":1983,
+	"cananeia":20.4,
+	"ubatuba":19.9
+},
+{
+	"ano":1983,
+	"cananeia":23.5,
+	"ubatuba":22.6
+},
+{
+	"ano":1983,
+	"cananeia":24.5,
+	"ubatuba":23.3
+},
+{
+	"ano":1984,
+	"cananeia":26.2,
+	"ubatuba":25.6
+},
+{
+	"ano":1984,
+	"cananeia":26.6,
+	"ubatuba":25.6
+},
+{
+	"ano":1984,
+	"cananeia":24.7,
+	"ubatuba":23.3
+},
+{
+	"ano":1984,
+	"cananeia":22.2,
+	"ubatuba":19.1
+},
+{
+	"ano":1984,
+	"cananeia":21.8,
+	"ubatuba":19.4
+},
+{
+	"ano":1984,
+	"cananeia":19.5,
+	"ubatuba":20.1
+},
+{
+	"ano":1984,
+	"cananeia":18.3,
+	"ubatuba":19
+},
+{
+	"ano":1984,
+	"cananeia":16.2,
+	"ubatuba":19
+},
+{
+	"ano":1984,
+	"cananeia":18.3,
+	"ubatuba":18.3
+},
+{
+	"ano":1984,
+	"cananeia":21.4,
+	"ubatuba":22
+},
+{
+	"ano":1984,
+	"cananeia":22.3,
+	"ubatuba":22.5
+},
+{
+	"ano":1984,
+	"cananeia":23,
+	"ubatuba":23.1
+},
+{
+	"ano":1985,
+	"cananeia":24,
+	"ubatuba":23.8
+},
+{
+	"ano":1985,
+	"cananeia":25.5,
+	"ubatuba":26.2
+},
+{
+	"ano":1985,
+	"cananeia":25.3,
+	"ubatuba":25.1
+},
+{
+	"ano":1985,
+	"cananeia":23.8,
+	"ubatuba":24.5
+},
+{
+	"ano":1985,
+	"cananeia":20.1,
+	"ubatuba":21.6
+},
+{
+	"ano":1985,
+	"cananeia":18,
+	"ubatuba":19.8
+},
+{
+	"ano":1985,
+	"cananeia":18,
+	"ubatuba":19.8
+},
+{
+	"ano":1985,
+	"cananeia":19.1,
+	"ubatuba":20.1
+},
+{
+	"ano":1985,
+	"cananeia":19.2,
+	"ubatuba":20.2
+},
+{
+	"ano":1985,
+	"cananeia":21.6,
+	"ubatuba":22.2
+},
+{
+	"ano":1985,
+	"cananeia":22.6,
+	"ubatuba":22.9
+},
+{
+	"ano":1985,
+	"cananeia":24,
+	"ubatuba":23.9
+}
+]

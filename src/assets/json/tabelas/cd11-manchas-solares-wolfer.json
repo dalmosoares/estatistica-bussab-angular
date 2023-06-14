@@ -1,0 +1,706 @@
+[
+{
+	"ano":1749,
+	"quantidade":80.9
+},
+{
+	"ano":1750,
+	"quantidade":83.4
+},
+{
+	"ano":1751,
+	"quantidade":47.7
+},
+{
+	"ano":1752,
+	"quantidade":47.8
+},
+{
+	"ano":1753,
+	"quantidade":30.7
+},
+{
+	"ano":1754,
+	"quantidade":12.2
+},
+{
+	"ano":1755,
+	"quantidade":9.6
+},
+{
+	"ano":1756,
+	"quantidade":10.2
+},
+{
+	"ano":1757,
+	"quantidade":32.4
+},
+{
+	"ano":1758,
+	"quantidade":47.6
+},
+{
+	"ano":1759,
+	"quantidade":54
+},
+{
+	"ano":1760,
+	"quantidade":62.9
+},
+{
+	"ano":1761,
+	"quantidade":85.9
+},
+{
+	"ano":1762,
+	"quantidade":61.2
+},
+{
+	"ano":1763,
+	"quantidade":45.1
+},
+{
+	"ano":1764,
+	"quantidade":36.4
+},
+{
+	"ano":1765,
+	"quantidade":20.9
+},
+{
+	"ano":1766,
+	"quantidade":11.4
+},
+{
+	"ano":1767,
+	"quantidade":37.8
+},
+{
+	"ano":1768,
+	"quantidade":69.8
+},
+{
+	"ano":1769,
+	"quantidade":106.1
+},
+{
+	"ano":1770,
+	"quantidade":100.8
+},
+{
+	"ano":1771,
+	"quantidade":81.6
+},
+{
+	"ano":1772,
+	"quantidade":66.5
+},
+{
+	"ano":1773,
+	"quantidade":34.8
+},
+{
+	"ano":1774,
+	"quantidade":30.6
+},
+{
+	"ano":1775,
+	"quantidade":7
+},
+{
+	"ano":1776,
+	"quantidade":19.8
+},
+{
+	"ano":1777,
+	"quantidade":92.5
+},
+{
+	"ano":1778,
+	"quantidade":154.4
+},
+{
+	"ano":1779,
+	"quantidade":125.9
+},
+{
+	"ano":1780,
+	"quantidade":84.8
+},
+{
+	"ano":1781,
+	"quantidade":68.1
+},
+{
+	"ano":1782,
+	"quantidade":38.5
+},
+{
+	"ano":1783,
+	"quantidade":22.8
+},
+{
+	"ano":1784,
+	"quantidade":10.2
+},
+{
+	"ano":1785,
+	"quantidade":24.1
+},
+{
+	"ano":1786,
+	"quantidade":82.9
+},
+{
+	"ano":1787,
+	"quantidade":132
+},
+{
+	"ano":1788,
+	"quantidade":130.9
+},
+{
+	"ano":1789,
+	"quantidade":118.1
+},
+{
+	"ano":1790,
+	"quantidade":89.9
+},
+{
+	"ano":1791,
+	"quantidade":66.6
+},
+{
+	"ano":1792,
+	"quantidade":60
+},
+{
+	"ano":1793,
+	"quantidade":46.9
+},
+{
+	"ano":1794,
+	"quantidade":41
+},
+{
+	"ano":1795,
+	"quantidade":21.3
+},
+{
+	"ano":1796,
+	"quantidade":16
+},
+{
+	"ano":1797,
+	"quantidade":6.4
+},
+{
+	"ano":1798,
+	"quantidade":4.1
+},
+{
+	"ano":1799,
+	"quantidade":6.8
+},
+{
+	"ano":1800,
+	"quantidade":14.5
+},
+{
+	"ano":1801,
+	"quantidade":34
+},
+{
+	"ano":1802,
+	"quantidade":45
+},
+{
+	"ano":1803,
+	"quantidade":43.1
+},
+{
+	"ano":1804,
+	"quantidade":47.5
+},
+{
+	"ano":1805,
+	"quantidade":42.2
+},
+{
+	"ano":1806,
+	"quantidade":28.1
+},
+{
+	"ano":1807,
+	"quantidade":10.1
+},
+{
+	"ano":1808,
+	"quantidade":8.1
+},
+{
+	"ano":1809,
+	"quantidade":2.5
+},
+{
+	"ano":1810,
+	"quantidade":0
+},
+{
+	"ano":1811,
+	"quantidade":1.4
+},
+{
+	"ano":1812,
+	"quantidade":5
+},
+{
+	"ano":1813,
+	"quantidade":12.2
+},
+{
+	"ano":1814,
+	"quantidade":13.9
+},
+{
+	"ano":1815,
+	"quantidade":35.4
+},
+{
+	"ano":1816,
+	"quantidade":45.8
+},
+{
+	"ano":1817,
+	"quantidade":41.1
+},
+{
+	"ano":1818,
+	"quantidade":30.4
+},
+{
+	"ano":1819,
+	"quantidade":23.9
+},
+{
+	"ano":1820,
+	"quantidade":15.7
+},
+{
+	"ano":1821,
+	"quantidade":6.6
+},
+{
+	"ano":1822,
+	"quantidade":4
+},
+{
+	"ano":1823,
+	"quantidade":1.8
+},
+{
+	"ano":1824,
+	"quantidade":8.5
+},
+{
+	"ano":1825,
+	"quantidade":16.6
+},
+{
+	"ano":1826,
+	"quantidade":36.3
+},
+{
+	"ano":1827,
+	"quantidade":49.7
+},
+{
+	"ano":1828,
+	"quantidade":62.5
+},
+{
+	"ano":1829,
+	"quantidade":67
+},
+{
+	"ano":1830,
+	"quantidade":71
+},
+{
+	"ano":1831,
+	"quantidade":47.8
+},
+{
+	"ano":1832,
+	"quantidade":27.5
+},
+{
+	"ano":1833,
+	"quantidade":8.5
+},
+{
+	"ano":1834,
+	"quantidade":13.2
+},
+{
+	"ano":1835,
+	"quantidade":56.9
+},
+{
+	"ano":1836,
+	"quantidade":121.5
+},
+{
+	"ano":1837,
+	"quantidade":138.3
+},
+{
+	"ano":1838,
+	"quantidade":103.2
+},
+{
+	"ano":1839,
+	"quantidade":85.8
+},
+{
+	"ano":1840,
+	"quantidade":63.2
+},
+{
+	"ano":1841,
+	"quantidade":36.8
+},
+{
+	"ano":1842,
+	"quantidade":24.2
+},
+{
+	"ano":1843,
+	"quantidade":10.7
+},
+{
+	"ano":1844,
+	"quantidade":15
+},
+{
+	"ano":1845,
+	"quantidade":40.1
+},
+{
+	"ano":1846,
+	"quantidade":61.5
+},
+{
+	"ano":1847,
+	"quantidade":98.5
+},
+{
+	"ano":1848,
+	"quantidade":124.3
+},
+{
+	"ano":1849,
+	"quantidade":95.9
+},
+{
+	"ano":1850,
+	"quantidade":66.5
+},
+{
+	"ano":1851,
+	"quantidade":64.5
+},
+{
+	"ano":1852,
+	"quantidade":54.2
+},
+{
+	"ano":1853,
+	"quantidade":39
+},
+{
+	"ano":1854,
+	"quantidade":20.6
+},
+{
+	"ano":1855,
+	"quantidade":6.7
+},
+{
+	"ano":1856,
+	"quantidade":4.3
+},
+{
+	"ano":1857,
+	"quantidade":22.8
+},
+{
+	"ano":1858,
+	"quantidade":54.8
+},
+{
+	"ano":1859,
+	"quantidade":93.8
+},
+{
+	"ano":1860,
+	"quantidade":95.7
+},
+{
+	"ano":1861,
+	"quantidade":77.2
+},
+{
+	"ano":1862,
+	"quantidade":59.1
+},
+{
+	"ano":1863,
+	"quantidade":44
+},
+{
+	"ano":1864,
+	"quantidade":47
+},
+{
+	"ano":1865,
+	"quantidade":30.5
+},
+{
+	"ano":1866,
+	"quantidade":16.3
+},
+{
+	"ano":1867,
+	"quantidade":7.3
+},
+{
+	"ano":1868,
+	"quantidade":37.3
+},
+{
+	"ano":1869,
+	"quantidade":73.9
+},
+{
+	"ano":1870,
+	"quantidade":139.1
+},
+{
+	"ano":1871,
+	"quantidade":111.2
+},
+{
+	"ano":1872,
+	"quantidade":101.7
+},
+{
+	"ano":1873,
+	"quantidade":66.3
+},
+{
+	"ano":1874,
+	"quantidade":44.7
+},
+{
+	"ano":1875,
+	"quantidade":17.1
+},
+{
+	"ano":1876,
+	"quantidade":11.3
+},
+{
+	"ano":1877,
+	"quantidade":12.3
+},
+{
+	"ano":1878,
+	"quantidade":3.4
+},
+{
+	"ano":1879,
+	"quantidade":6
+},
+{
+	"ano":1880,
+	"quantidade":32.3
+},
+{
+	"ano":1881,
+	"quantidade":54.3
+},
+{
+	"ano":1882,
+	"quantidade":59.7
+},
+{
+	"ano":1883,
+	"quantidade":63.7
+},
+{
+	"ano":1884,
+	"quantidade":63.5
+},
+{
+	"ano":1885,
+	"quantidade":52.2
+},
+{
+	"ano":1886,
+	"quantidade":25.4
+},
+{
+	"ano":1887,
+	"quantidade":13.1
+},
+{
+	"ano":1888,
+	"quantidade":6.8
+},
+{
+	"ano":1889,
+	"quantidade":6.3
+},
+{
+	"ano":1890,
+	"quantidade":7.1
+},
+{
+	"ano":1891,
+	"quantidade":35.6
+},
+{
+	"ano":1892,
+	"quantidade":73
+},
+{
+	"ano":1893,
+	"quantidade":84.9
+},
+{
+	"ano":1894,
+	"quantidade":78
+},
+{
+	"ano":1895,
+	"quantidade":64
+},
+{
+	"ano":1896,
+	"quantidade":41.8
+},
+{
+	"ano":1897,
+	"quantidade":26.2
+},
+{
+	"ano":1898,
+	"quantidade":26.7
+},
+{
+	"ano":1899,
+	"quantidade":12.1
+},
+{
+	"ano":1900,
+	"quantidade":9.5
+},
+{
+	"ano":1901,
+	"quantidade":2.7
+},
+{
+	"ano":1902,
+	"quantidade":5
+},
+{
+	"ano":1903,
+	"quantidade":24.4
+},
+{
+	"ano":1904,
+	"quantidade":42
+},
+{
+	"ano":1905,
+	"quantidade":63.5
+},
+{
+	"ano":1906,
+	"quantidade":53.8
+},
+{
+	"ano":1907,
+	"quantidade":62
+},
+{
+	"ano":1908,
+	"quantidade":48.5
+},
+{
+	"ano":1909,
+	"quantidade":43.9
+},
+{
+	"ano":1910,
+	"quantidade":18.6
+},
+{
+	"ano":1911,
+	"quantidade":5.7
+},
+{
+	"ano":1912,
+	"quantidade":3.6
+},
+{
+	"ano":1913,
+	"quantidade":1.4
+},
+{
+	"ano":1914,
+	"quantidade":9.6
+},
+{
+	"ano":1915,
+	"quantidade":47.4
+},
+{
+	"ano":1916,
+	"quantidade":57.1
+},
+{
+	"ano":1917,
+	"quantidade":103.9
+},
+{
+	"ano":1918,
+	"quantidade":80.6
+},
+{
+	"ano":1919,
+	"quantidade":63.6
+},
+{
+	"ano":1920,
+	"quantidade":37.6
+},
+{
+	"ano":1921,
+	"quantidade":26.1
+},
+{
+	"ano":1922,
+	"quantidade":14.2
+},
+{
+	"ano":1923,
+	"quantidade":5.8
+},
+{
+	"ano":1924,
+	"quantidade":16.7
+}
+]

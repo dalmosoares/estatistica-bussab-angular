@@ -1,0 +1,19 @@
+button{
+   background-color:transparent;
+   border: 1px solid black;
+   display: inline-flex;
+   align-items: center;
+   min-width: 45px;
+   min-height: 28px;
+   justify-content: center;
+}
+button .mat-icon{
+    float: left;
+}
+.mat-tree-node{
+    min-height: 30px;
+    text-align: center;
+}
+.ativado{
+    background-color: coral;
+}

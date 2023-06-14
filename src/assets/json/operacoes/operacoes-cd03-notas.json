@@ -1,0 +1,33 @@
+{
+    "nomeTabela":"cd03-notas",
+    "operacoesColuna":[
+        {
+            "nomeColuna":"nota",
+            "operacoes":[
+                {
+                    "tipo":"freqcontinua",
+                    "parametros":{
+                        "intervalos":[0,1,2,3,4,5,6,7,8,9,10,11]
+                    }
+                },
+                {
+                    "tipo":"ramosfolhas",
+                    "parametros":{
+                        "digitosFolha":1,
+                        "dividirPor":10
+                    }
+                },
+                {
+                    "tipo":"histograma",
+                    "parametros":{
+                        "intervalos":[0,1,2,3,4,5,6,7,8,9,10],
+                        "xCoordDiv":2,
+                        "yCoordDiv":5,
+                        "yCoordMarca":5,
+                        "areaNaoUnitaria":true
+                    }
+                }
+            ]
+        }
+    ]
+}

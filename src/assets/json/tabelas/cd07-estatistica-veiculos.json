@@ -1,0 +1,212 @@
+[
+{
+	"veiculo":"Asia Towner",
+	"preco":9440,
+	"comprimento":3.36,
+	"motor":40,
+	"nacionalOuImportado":"I"
+},
+{
+	"veiculo":"Audi A3",
+	"preco":38850,
+	"comprimento":4.15,
+	"motor":125,
+	"nacionalOuImportado":"I"
+},
+{
+	"veiculo":"Chevrolet Astra",
+	"preco":10532,
+	"comprimento":4.11,
+	"motor":110,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Chevrolet Blazer",
+	"preco":16346,
+	"comprimento":4.60,
+	"motor":106,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Chevrolet Corsa",
+	"preco":6176,
+	"comprimento":3.73,
+	"motor":60,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Chevrolet Tigra",
+	"preco":12890,
+	"comprimento":3.92,
+	"motor":100,
+	"nacionalOuImportado":"I"
+},
+{
+	"veiculo":"Chevrolet Vectra",
+	"preco":13140,
+	"comprimento":4.47,
+	"motor":110,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Chrysler Neon",
+	"preco":31640,
+	"comprimento":4.36,
+	"motor":115,
+	"nacionalOuImportado":"I"
+},
+{
+	"veiculo":"Dodge Dakota",
+	"preco":11630,
+	"comprimento":4.98,
+	"motor":121,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Fiat Fiorino",
+	"preco":6700,
+	"comprimento":4.16,
+	"motor":76,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Fiat Marea",
+	"preco":12923,
+	"comprimento":4.39,
+	"motor":127,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Fiat Mille",
+	"preco":5257,
+	"comprimento":3.64,
+	"motor":57,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Fiat Palio",
+	"preco":6260,
+	"comprimento":3.73,
+	"motor":61,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Fiat Siena",
+	"preco":7780,
+	"comprimento":4.10,
+	"motor":61,
+	"nacionalOuImportado":"I"
+},
+{
+	"veiculo":"Ford Escort",
+	"preco":10767,
+	"comprimento":4.20,
+	"motor":115,
+	"nacionalOuImportado":"I"
+},
+{
+	"veiculo":"Ford Fiesta",
+	"preco":6316,
+	"comprimento":3.83,
+	"motor":52,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Ford Ka",
+	"preco":5680,
+	"comprimento":3.62,
+	"motor":54,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Ford Mondeo",
+	"preco":33718,
+	"comprimento":4.56,
+	"motor":130,
+	"nacionalOuImportado":"I"
+},
+{
+	"veiculo":"Honda Civic",
+	"preco":14460,
+	"comprimento":4.45,
+	"motor":106,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Hyundai Accent",
+	"preco":21500,
+	"comprimento":4.12,
+	"motor":91,
+	"nacionalOuImportado":" I"
+},
+{
+	"veiculo":"Peugeot 106",
+	"preco":13840,
+	"comprimento":3.68,
+	"motor":50,
+	"nacionalOuImportado":"I"
+},
+{
+	"veiculo":"Renault Clio",
+	"preco":13700,
+	"comprimento":3.70,
+	"motor":74,
+	"nacionalOuImportado":"I"
+},
+{
+	"veiculo":"Toyota Corolla",
+	"preco":15520,
+	"comprimento":4.39,
+	"motor":116,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"Toyota Perua",
+	"preco":24632,
+	"comprimento":4.40,
+	"motor":96,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"VW Gol",
+	"preco":6340,
+	"comprimento":3.81,
+	"motor":54,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"VW Golf",
+	"preco":22200,
+	"comprimento":4.15,
+	"motor":100,
+	"nacionalOuImportado":"I"
+},
+{
+	"veiculo":"VW Parati",
+	"preco":9300,
+	"comprimento":4.08,
+	"motor":69,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"VW Polo",
+	"preco":12018,
+	"comprimento":4.14,
+	"motor":99,
+	"nacionalOuImportado":"I"
+},
+{
+	"veiculo":"VW Santana",
+	"preco":11386,
+	"comprimento":4.57,
+	"motor":101,
+	"nacionalOuImportado":"N"
+},
+{
+	"veiculo":"VW Saveiro",
+	"preco":7742,
+	"comprimento":4.38,
+	"motor":88,
+	"nacionalOuImportado":"N"
+}
+]

@@ -1,0 +1,152 @@
+[
+{
+	"numero":1,
+	"municipio":"São Paulo(SP)",
+	"populacao":988.8
+},
+{
+	"numero":2,
+	"municipio":"Rio de Janeiro(RJ)",
+	"populacao":556.9
+},
+{
+	"numero":3,
+	"municipio":"Salvador(BA)",
+	"populacao":224.6
+},
+{
+	"numero":4,
+	"municipio":"Belo Horizonte(MG)",
+	"populacao":210.9
+},
+{
+	"numero":5,
+	"municipio":"Fortaleza(CE)",
+	"populacao":201.5
+},
+{
+	"numero":6,
+	"municipio":"Brasília(DF)",
+	"populacao":187.7
+},
+{
+	"numero":7,
+	"municipio":"Curitiba(PR)",
+	"populacao":151.6
+},
+{
+	"numero":8,
+	"municipio":"Recife(PE)",
+	"populacao":135.8
+},
+{
+	"numero":9,
+	"municipio":"Porto Alegre(RS)",
+	"populacao":129.8
+},
+{
+	"numero":10,
+	"municipio":"Manaus(AM)",
+	"populacao":119.4
+},
+{
+	"numero":11,
+	"municipio":"Belém(PA)",
+	"populacao":116
+},
+{
+	"numero":12,
+	"municipio":"Goiânia(GO)",
+	"populacao":102.3
+},
+{
+	"numero":13,
+	"municipio":"Guarulhos(SP)",
+	"populacao":101.8
+},
+{
+	"numero":14,
+	"municipio":"Campinas(SP)",
+	"populacao":92.4
+},
+{
+	"numero":15,
+	"municipio":"São Gonçalo(RJ)",
+	"populacao":84.7
+},
+{
+	"numero":16,
+	"municipio":"Nova Iguaçu(RJ)",
+	"populacao":83.9
+},
+{
+	"numero":17,
+	"municipio":"São Luis(MA)",
+	"populacao":80.2
+},
+{
+	"numero":18,
+	"municipio":"Maceió(AL)",
+	"populacao":74.7
+},
+{
+	"numero":19,
+	"municipio":"Duque de Caxias(RJ)",
+	"populacao":72.7
+},
+{
+	"numero":20,
+	"municipio":"São Bernardo do Campo(SP)",
+	"populacao":68.4
+},
+{
+	"numero":21,
+	"municipio":"Natal(RN)",
+	"populacao":66.8
+},
+{
+	"numero":22,
+	"municipio":"Teresina(PI)",
+	"populacao":66.8
+},
+{
+	"numero":23,
+	"municipio":"Osasco(SP)",
+	"populacao":63.7
+},
+{
+	"numero":24,
+	"municipio":"Santo André(SP)",
+	"populacao":62.8
+},
+{
+	"numero":25,
+	"municipio":"Campo Grande(MS)",
+	"populacao":61.9
+},
+{
+	"numero":26,
+	"municipio":"João Pessoa(PB)",
+	"populacao":56.2
+},
+{
+	"numero":27,
+	"municipio":"Jaboatão(PE)",
+	"populacao":54.1
+},
+{
+	"numero":28,
+	"municipio":"Contagem(MG)",
+	"populacao":50.3
+},
+{
+	"numero":29,
+	"municipio":"São José dos Campos(SP)",
+	"populacao":49.7
+},
+{
+	"numero":30,
+	"municipio":"Ribeirão Preto(SP)",
+	"populacao":46.3
+}
+]

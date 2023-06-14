@@ -1,0 +1,362 @@
+[
+{
+	"numero":1,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 1",
+	"filhos":"-",
+	"salarioPorSalMin":4.00,
+	"idadeAnos":26,
+	"idadeMeses":3,
+	"nascimento":"interior"
+},
+{
+	"numero":2,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 1",
+	"filhos":1,
+	"salarioPorSalMin":4.56,
+	"idadeAnos":32,
+	"idadeMeses":10,
+	"nascimento":"capital"
+},
+{
+	"numero":3,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 1",
+	"filhos":2,
+	"salarioPorSalMin":5.25,
+	"idadeAnos":36,
+	"idadeMeses":5,
+	"nascimento":"capital"
+},
+{
+	"numero":4,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 2",
+	"filhos":"-",
+	"salarioPorSalMin":5.73,
+	"idadeAnos":20,
+	"idadeMeses":10,
+	"nascimento":"outro"
+},
+{
+	"numero":5,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 1",
+	"filhos":"-",
+	"salarioPorSalMin":6.26,
+	"idadeAnos":40,
+	"idadeMeses":7,
+	"nascimento":"outro"
+},
+{
+	"numero":6,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 1",
+	"filhos":0,
+	"salarioPorSalMin":6.66,
+	"idadeAnos":28,
+	"idadeMeses":0,
+	"nascimento":"interior"
+},
+{
+	"numero":7,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 1",
+	"filhos":"-",
+	"salarioPorSalMin":6.86,
+	"idadeAnos":41,
+	"idadeMeses":0,
+	"nascimento":"interior"
+},
+{
+	"numero":8,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 1",
+	"filhos":"-",
+	"salarioPorSalMin":7.39,
+	"idadeAnos":43,
+	"idadeMeses":4,
+	"nascimento":"capital"
+},
+{
+	"numero":9,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":1,
+	"salarioPorSalMin":7.59,
+	"idadeAnos":34,
+	"idadeMeses":10,
+	"nascimento":"capital"
+},
+{
+	"numero":10,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 2",
+	"filhos":"-",
+	"salarioPorSalMin":7.44,
+	"idadeAnos":23,
+	"idadeMeses":6,
+	"nascimento":"outro"
+},
+{
+	"numero":11,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":2,
+	"salarioPorSalMin":8.12,
+	"idadeAnos":33,
+	"idadeMeses":6,
+	"nascimento":"interior"
+},
+{
+	"numero":12,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 1",
+	"filhos":"-",
+	"salarioPorSalMin":8.46,
+	"idadeAnos":27,
+	"idadeMeses":11,
+	"nascimento":"capital"
+},
+{
+	"numero":13,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 2",
+	"filhos":"-",
+	"salarioPorSalMin":8.74,
+	"idadeAnos":37,
+	"idadeMeses":5,
+	"nascimento":"outro"
+},
+{
+	"numero":14,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 1",
+	"filhos":3,
+	"salarioPorSalMin":8.95,
+	"idadeAnos":44,
+	"idadeMeses":2,
+	"nascimento":"outro"
+},
+{
+	"numero":15,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":0,
+	"salarioPorSalMin":9.13,
+	"idadeAnos":30,
+	"idadeMeses":5,
+	"nascimento":"interior"
+},
+{
+	"numero":16,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 2",
+	"filhos":"-",
+	"salarioPorSalMin":9.35,
+	"idadeAnos":38,
+	"idadeMeses":8,
+	"nascimento":"outro"
+},
+{
+	"numero":17,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":1,
+	"salarioPorSalMin":9.77,
+	"idadeAnos":31,
+	"idadeMeses":7,
+	"nascimento":"capital"
+},
+{
+	"numero":18,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 1",
+	"filhos":2,
+	"salarioPorSalMin":9.80,
+	"idadeAnos":39,
+	"idadeMeses":7,
+	"nascimento":"outro"
+},
+{
+	"numero":19,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"superior",
+	"filhos":"-",
+	"salarioPorSalMin":10.53,
+	"idadeAnos":25,
+	"idadeMeses":8,
+	"nascimento":"interior"
+},
+{
+	"numero":20,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 2",
+	"filhos":"-",
+	"salarioPorSalMin":10.76,
+	"idadeAnos":37,
+	"idadeMeses":4,
+	"nascimento":"interior"
+},
+{
+	"numero":21,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":1,
+	"salarioPorSalMin":11.06,
+	"idadeAnos":30,
+	"idadeMeses":9,
+	"nascimento":"outro"
+},
+{
+	"numero":22,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 2",
+	"filhos":"-",
+	"salarioPorSalMin":11.59,
+	"idadeAnos":34,
+	"idadeMeses":2,
+	"nascimento":"capital"
+},
+{
+	"numero":23,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 1",
+	"filhos":"-",
+	"salarioPorSalMin":12.00,
+	"idadeAnos":41,
+	"idadeMeses":0,
+	"nascimento":"outro"
+},
+{
+	"numero":24,
+	"estadoCivil":"casado",
+	"grauInstrucao":"superior",
+	"filhos":0,
+	"salarioPorSalMin":12.79,
+	"idadeAnos":26,
+	"idadeMeses":1,
+	"nascimento":"outro"
+},
+{
+	"numero":25,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":2,
+	"salarioPorSalMin":13.23,
+	"idadeAnos":32,
+	"idadeMeses":5,
+	"nascimento":"interior"
+},
+{
+	"numero":26,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":2,
+	"salarioPorSalMin":13.60,
+	"idadeAnos":35,
+	"idadeMeses":0,
+	"nascimento":"outro"
+},
+{
+	"numero":27,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"grau 1",
+	"filhos":"-",
+	"salarioPorSalMin":13.85,
+	"idadeAnos":46,
+	"idadeMeses":7,
+	"nascimento":"outro"
+},
+{
+	"numero":28,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":0,
+	"salarioPorSalMin":14.69,
+	"idadeAnos":29,
+	"idadeMeses":8,
+	"nascimento":"interior"
+},
+{
+	"numero":29,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":5,
+	"salarioPorSalMin":14.71,
+	"idadeAnos":40,
+	"idadeMeses":6,
+	"nascimento":"interior"
+},
+{
+	"numero":30,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":2,
+	"salarioPorSalMin":15.99,
+	"idadeAnos":35,
+	"idadeMeses":10,
+	"nascimento":"capital"
+},
+{
+	"numero":31,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"superior",
+	"filhos":"-",
+	"salarioPorSalMin":16.22,
+	"idadeAnos":31,
+	"idadeMeses":5,
+	"nascimento":"outro"
+},
+{
+	"numero":32,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":1,
+	"salarioPorSalMin":16.61,
+	"idadeAnos":36,
+	"idadeMeses":4,
+	"nascimento":"interior"
+},
+{
+	"numero":33,
+	"estadoCivil":"casado",
+	"grauInstrucao":"superior",
+	"filhos":3,
+	"salarioPorSalMin":17.26,
+	"idadeAnos":43,
+	"idadeMeses":7,
+	"nascimento":"capital"
+},
+{
+	"numero":34,
+	"estadoCivil":"solteiro",
+	"grauInstrucao":"superior",
+	"filhos":"-",
+	"salarioPorSalMin":18.75,
+	"idadeAnos":33,
+	"idadeMeses":7,
+	"nascimento":"capital"
+},
+{
+	"numero":35,
+	"estadoCivil":"casado",
+	"grauInstrucao":"grau 2",
+	"filhos":2,
+	"salarioPorSalMin":19.40,
+	"idadeAnos":48,
+	"idadeMeses":11,
+	"nascimento":"capital"
+},
+{
+	"numero":36,
+	"estadoCivil":"casado",
+	"grauInstrucao":"superior",
+	"filhos":3,
+	"salarioPorSalMin":23.30,
+	"idadeAnos":42,
+	"idadeMeses":2,
+	"nascimento":"interior"
+}
+]

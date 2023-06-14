@@ -1,0 +1,8 @@
+<table>
+    <tbody>
+        <tr *ngFor="let ramo of ramosFolhas.ramos">
+            <td class="ramo">{{ramo.valor}}</td>
+            <td class="folha" *ngFor="let folha of ramo.folhas">{{folha.valor}}</td>
+        </tr>
+    </tbody>
+</table>

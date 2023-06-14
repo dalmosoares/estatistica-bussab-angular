@@ -1,0 +1,164 @@
+[
+{
+	"UF":"RO",
+	"superficie":237576.167,
+	"populacao":1453756,
+	"densidade":6.12
+},
+{
+	"UF":"AC",
+	"superficie":164165.25,
+	"populacao":655385,
+	"densidade":3.99
+},
+{
+	"UF":"AM",
+	"superficie":1559161.81,
+	"populacao":3221040,
+	"densidade":2.07
+},
+{
+	"UF":"RR",
+	"superficie":224298.98,
+	"populacao":395725,
+	"densidade":1.76
+},
+{
+	"UF":"PA",
+	"superficie":1247689.515,
+	"populacao":7065573,
+	"densidade":5.66
+},
+{
+	"UF":"AP",
+	"superficie":142817.585,
+	"populacao":587311,
+	"densidade":4.11
+},
+{
+	"UF":"TO",
+	"superficie":277620.914,
+	"populacao":1243627,
+	"densidade":4.48
+},
+{
+	"UF":"MA",
+	"superficie":331983.293,
+	"populacao":6118995,
+	"densidade":18.43
+},
+{
+	"UF":"PI",
+	"superficie":251529.186,
+	"populacao":3032421,
+	"densidade":12.06
+},
+{
+	"UF":"CE",
+	"superficie":148825.602,
+	"populacao":8185286,
+	"densidade":55.00
+},
+{
+	"UF":"RN",
+	"superficie":52796.791,
+	"populacao":3013740,
+	"densidade":57.08
+},
+{
+	"UF":"PB",
+	"superficie":56439.838,
+	"populacao":3641395,
+	"densidade":64.52
+},
+{
+	"UF":"PE",
+	"superficie":98311.616,
+	"populacao":8486638,
+	"densidade":86.32
+},
+{
+	"UF":"AL",
+	"superficie":27767.661,
+	"populacao":3037103,
+	"densidade":109.38
+},
+{
+	"UF":"SE",
+	"superficie":21910.348,
+	"populacao":1939426,
+	"densidade":88.52
+},
+{
+	"UF":"BA",
+	"superficie":564692.669,
+	"populacao":14080654,
+	"densidade":24.94
+},
+{
+	"UF":"MG",
+	"superficie":586528.293,
+	"populacao":19273506,
+	"densidade":32.86
+},
+{
+	"UF":"ES",
+	"superficie":46077.519,
+	"populacao":3351669,
+	"densidade":72.74
+},
+{
+	"UF":"RJ",
+	"superficie":43696.054,
+	"populacao":15420375,
+	"densidade":352.90
+},
+{
+	"UF":"SP",
+	"superficie":248209.426,
+	"populacao":39827570,
+	"densidade":160.46
+},
+{
+	"UF":"PR",
+	"superficie":199314.85,
+	"populacao":10284503,
+	"densidade":51.60
+},
+{
+	"UF":"SC",
+	"superficie":95346.181,
+	"populacao":5866252,
+	"densidade":61.53
+},
+{
+	"UF":"RS",
+	"superficie":281748.583,
+	"populacao":10582840,
+	"densidade":37.56
+},
+{
+	"UF":"MS",
+	"superficie":357124.962,
+	"populacao":2265274,
+	"densidade":6.34
+},
+{
+	"UF":"MT",
+	"superficie":903357.908,
+	"populacao":2854642,
+	"densidade":3.16
+},
+{
+	"UF":"GO",
+	"superficie":340086.698,
+	"populacao":5647035,
+	"densidade":16.60
+},
+{
+	"UF":"DF",
+	"superficie":5801.937,
+	"populacao":2455903,
+	"densidade":423.29
+}
+]

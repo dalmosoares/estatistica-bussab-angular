@@ -1,0 +1,14 @@
+<h3>{{planilha.titulo}}</h3>
+<table>
+    <thead>
+        <tr>
+            <th *ngFor="let campo of planilha.campos">{{campo}}</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let linha of planilha.linhas">
+            <td *ngFor="let campo of linha">{{campo}}</td>
+        </tr>
+    </tbody>
+</table>
+

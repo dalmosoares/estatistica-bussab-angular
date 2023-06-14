@@ -1,0 +1,19 @@
+{
+    "nomeTabela":"exemplo2-9-dureza",
+    "operacoesColuna":[
+        {
+            "nomeColuna":"dureza",
+            "operacoes":[
+                {
+                    "tipo":"ramosfolhas",
+                    "parametros":{
+                        "truncar":true,
+                        "digitosFolha":1,
+                        "dividirPor":10,
+                        "multiplosRamos":2
+                    }
+                }
+            ]
+        }
+    ]
+}

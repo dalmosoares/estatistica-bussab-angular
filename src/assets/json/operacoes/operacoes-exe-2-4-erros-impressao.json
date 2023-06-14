@@ -1,0 +1,25 @@
+{
+    "nomeTabela":"exe-2-4-erros-impressao",
+    "operacoesColuna":[
+        {
+            "nomeColuna":"erros",
+            "operacoes":[
+                {
+                    "tipo":"ramosfolhas",
+                    "parametros":{
+                        "digitosFolha":1,
+                        "dividirPor":10
+                    }
+                },
+                {
+                    "tipo":"histograma",
+                    "parametros":{
+                        "intervalos":[4,8,12,16,20,24],
+                        "yCoordDiv":0.01,
+                        "yCoordMarca":0.02
+                    }
+                }
+            ]
+        }
+    ]
+}

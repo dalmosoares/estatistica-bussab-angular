@@ -1,0 +1,212 @@
+[
+{
+	"cidade":"Amsterdam ",
+	"professorSecundario":34125,
+	"mecanico":26542,
+	"administrador":59280,
+	"engenheiroEletrico":47730
+},
+{
+	"cidade":"Atena ",
+	"professorSecundario":11025,
+	"mecanico":12456,
+	"administrador":31980,
+	"engenheiroEletrico":18870
+},
+{
+	"cidade":"Bogotá ",
+	"professorSecundario":4725,
+	"mecanico":3806,
+	"administrador":14040,
+	"engenheiroEletrico":14430
+},
+{
+	"cidade":"Bruxelas ",
+	"professorSecundario":28350,
+	"mecanico":25528,
+	"administrador":59280,
+	"engenheiroEletrico":33855
+},
+{
+	"cidade":"Buenos Aires ",
+	"professorSecundario":5775,
+	"mecanico":6574,
+	"administrador":21060,
+	"engenheiroEletrico":36075
+},
+{
+	"cidade":"Caracas ",
+	"professorSecundario":11550,
+	"mecanico":20068,
+	"administrador":45240,
+	"engenheiroEletrico":42180
+},
+{
+	"cidade":"Chicago ",
+	"professorSecundario":33600,
+	"mecanico":39790,
+	"administrador":60060,
+	"engenheiroEletrico":48285
+},
+{
+	"cidade":"Cid. México ",
+	"professorSecundario":6825,
+	"mecanico":8304,
+	"administrador":28860,
+	"engenheiroEletrico":22200
+},
+{
+	"cidade":"Dublin ",
+	"professorSecundario":18375,
+	"mecanico":13840,
+	"administrador":23400,
+	"engenheiroEletrico":25530
+},
+{
+	"cidade":"Estocolmo ",
+	"professorSecundario":28875,
+	"mecanico":25950,
+	"administrador":54600,
+	"engenheiroEletrico":33855
+},
+{
+	"cidade":"Genebra ",
+	"professorSecundario":56700,
+	"mecanico":37022,
+	"administrador":71760,
+	"engenheiroEletrico":53835
+},
+{
+	"cidade":"HongKong ",
+	"professorSecundario":11550,
+	"mecanico":5822,
+	"administrador":20280,
+	"engenheiroEletrico":17205
+},
+{
+	"cidade":"Istambul ",
+	"professorSecundario":4725,
+	"mecanico":6228,
+	"administrador":13260,
+	"engenheiroEletrico":12210
+},
+{
+	"cidade":"Londres ",
+	"professorSecundario":20745,
+	"mecanico":17646,
+	"administrador":31200,
+	"engenheiroEletrico":21090
+},
+{
+	"cidade":"Los Angeles ",
+	"professorSecundario":32550,
+	"mecanico":36330,
+	"administrador":59280,
+	"engenheiroEletrico":46065
+},
+{
+	"cidade":"Madri ",
+	"professorSecundario":14700,
+	"mecanico":12110,
+	"administrador":32760,
+	"engenheiroEletrico":31635
+},
+{
+	"cidade":"Manila ",
+	"professorSecundario":2100,
+	"mecanico":1730,
+	"administrador":20280,
+	"engenheiroEletrico":4440
+},
+{
+	"cidade":"Milão ",
+	"professorSecundario":12600,
+	"mecanico":13494,
+	"administrador":17160,
+	"engenheiroEletrico":31080
+},
+{
+	"cidade":"Montreal ",
+	"professorSecundario":29400,
+	"mecanico":23528,
+	"administrador":51480,
+	"engenheiroEletrico":34410
+},
+{
+	"cidade":"Nova Iorque ",
+	"professorSecundario":27300,
+	"mecanico":32870,
+	"administrador":67080,
+	"engenheiroEletrico":53280
+},
+{
+	"cidade":"Paris ",
+	"professorSecundario":24150,
+	"mecanico":15916,
+	"administrador":40560,
+	"engenheiroEletrico":43845
+},
+{
+	"cidade":"Rio de Janeiro ",
+	"professorSecundario":7350,
+	"mecanico":" 8650 ",
+	"administrador":53040,
+	"engenheiroEletrico":42735
+},
+{
+	"cidade":"San Francisco ",
+	"professorSecundario":32025,
+	"mecanico":39946,
+	"administrador":65520,
+	"engenheiroEletrico":46065
+},
+{
+	"cidade":"São Paulo ",
+	"professorSecundario":9450,
+	"mecanico":11072,
+	"administrador":74470,
+	"engenheiroEletrico":29970
+},
+{
+	"cidade":"Singapura ",
+	"professorSecundario":8925,
+	"mecanico":5190,
+	"administrador":24960,
+	"engenheiroEletrico":8325
+},
+{
+	"cidade":"Sydney ",
+	"professorSecundario":28350,
+	"mecanico":20068,
+	"administrador":34320,
+	"engenheiroEletrico":31080
+},
+{
+	"cidade":"Tela Aviv ",
+	"professorSecundario":7875,
+	"mecanico":9688,
+	"administrador":14040,
+	"engenheiroEletrico":14430
+},
+{
+	"cidade":"Tokyo ",
+	"professorSecundario":30450,
+	"mecanico":16954,
+	"administrador":63180,
+	"engenheiroEletrico":34410
+},
+{
+	"cidade":"Toronto ",
+	"professorSecundario":29925,
+	"mecanico":25950,
+	"administrador":44460,
+	"engenheiroEletrico":39960
+},
+{
+	"cidade":"Zurich ",
+	"professorSecundario":52500,
+	"mecanico":34600,
+	"administrador":78000,
+	"engenheiroEletrico":55500
+}
+]
