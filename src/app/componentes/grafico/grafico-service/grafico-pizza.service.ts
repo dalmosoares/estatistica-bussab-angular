@@ -2,8 +2,8 @@ import { ElementRef } from "@angular/core";
 import { FreqDiscr } from "src/app/modelo/freq/FreqDiscr";
 import { FreqDiscrItem } from "src/app/modelo/freq/FreqDiscrItem";
 import { GraficoService } from "./grafico.service";
-import { OpcTipoEnum } from "src/app/modelo/opc/OpcTipoEnum";
-import { Grafico } from "../grafico-modelo/Grafico";
+import { OperacaoTipoEnum } from "src/app/modelo/operacao/OperacaoTipoEnum";
+import { Coluna } from "src/app/modelo/entidade/coluna/Coluna";
 
 type GraficoPizzaItem = {
     rotulo: string,
@@ -22,6 +22,7 @@ type GraficoPizzaItem = {
 
 export class GraficoPizzaService extends GraficoService{
 
+    protected override operacaoTipo = OperacaoTipoEnum.GRAFICO_PIZZA;
     dados:FreqDiscrItem[];
     graficoItems:GraficoPizzaItem[];
     escala:number;
@@ -32,10 +33,10 @@ export class GraficoPizzaService extends GraficoService{
     rotuloDistancia:number;
 
     constructor(
-        grafico:Grafico,
+        coluna:Coluna,
         canvasEl: ElementRef<HTMLCanvasElement>
     ){
-        super(OpcTipoEnum.GRAFICO_PIZZA,canvasEl,grafico);
+        super(canvasEl,coluna);
     }
 
     iniciarLocal(): void {
@@ -48,7 +49,7 @@ export class GraficoPizzaService extends GraficoService{
         this.cy=0;
         this.rotuloDistancia=5;
         const format2Dec = new Intl.NumberFormat('pt-BR',{style:'decimal',minimumFractionDigits:2,maximumFractionDigits:2});
-        this.dados = new FreqDiscr(this.grafico.coluna.registros).freqs;
+        this.dados = new FreqDiscr(this.coluna.registros).freqs;
         const totalFreq = this.dados.map(d=>d.freq).reduce((prev,curr)=>prev+curr,0);
         this.escala = (2*Math.PI)/totalFreq;
         const x0 = this.cx;

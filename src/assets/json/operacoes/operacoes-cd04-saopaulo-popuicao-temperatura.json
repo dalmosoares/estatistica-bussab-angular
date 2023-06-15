@@ -1,0 +1,24 @@
+{
+    "nomeTabela":"cd04-saopaulo-popuicao-temperatura",
+    "operacoesColuna":[
+        {
+            "nomeColuna":"temperatura",
+            "operacoes":[
+                {
+                    "tipo":"freqcontinua",
+                    "parametros":{
+                        "intervalos":[4,8,12,16,20,24]
+                    }
+                },
+                {
+                    "tipo":"grafico_ligado",
+                    "parametros":{
+                        "excluir":"-",
+                        "marcarAusentes":true,
+                        "dependeDe":"id"
+                    }
+                }
+            ]
+        }
+    ]
+}

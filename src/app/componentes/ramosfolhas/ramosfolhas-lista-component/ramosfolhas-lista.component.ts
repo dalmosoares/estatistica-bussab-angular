@@ -3,7 +3,7 @@ import { Entidade } from 'src/app/modelo/entidade/Entidade';
 import { EntidadeAcoes } from 'src/app/modelo/entidade/EntidadeAcoes';
 import { EntidadeTipoEnum } from 'src/app/modelo/entidade/EntidadeTipoEnum';
 import { Coluna } from 'src/app/modelo/entidade/coluna/Coluna';
-import { Opc } from 'src/app/modelo/opc/Opc';
+import { Operacao } from 'src/app/modelo/operacao/Operacao';
 import { RamosFolhas } from '../ramosfolhas-modelo/RamosFolhas';
 import { Ramo } from '../ramosfolhas-modelo/Ramo';
 import { TabelaRepository } from 'src/app/repository/tabela.repository';
@@ -17,7 +17,7 @@ import { NumeroUtil } from 'src/app/utils/numero-util';
 export class RamosfolhasListaComponent implements OnChanges {
 
   @Input() public entidade:Entidade;
-  @Input() public opc:Opc;
+  @Input() public opc:Operacao;
 
   ramosFolhasLista:RamosFolhas[] = [];
   private digitosFolhaPadrao = 2;

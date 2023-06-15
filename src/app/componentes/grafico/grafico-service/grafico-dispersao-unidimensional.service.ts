@@ -2,9 +2,9 @@ import { ElementRef } from "@angular/core";
 import { FreqDiscr } from "src/app/modelo/freq/FreqDiscr";
 import { FreqDiscrItem } from "src/app/modelo/freq/FreqDiscrItem";
 import { GraficoService } from "./grafico.service";
-import { OpcTipoEnum } from "src/app/modelo/opc/OpcTipoEnum";
-import { Grafico } from "../grafico-modelo/Grafico";
+import { OperacaoTipoEnum } from "src/app/modelo/operacao/OperacaoTipoEnum";
 import { FreqCont } from "src/app/modelo/freq/FreqCont";
+import { Coluna } from "src/app/modelo/entidade/coluna/Coluna";
 
 type GraficoItem = {
     freq:FreqDiscrItem,
@@ -37,28 +37,23 @@ export class DispersaoUnidimensionalService extends GraficoService{
     subTipo:number;
 
     constructor(
-        grafico:Grafico,
+        coluna:Coluna,
         canvasEl: ElementRef<HTMLCanvasElement>,
         subTipo:number
     ){
-        super(
-            (subTipo==1)?OpcTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL1:
-                ((subTipo==2)?OpcTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL2:OpcTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL3),
-            canvasEl,
-            grafico
-        );
+        super(canvasEl,coluna);
         this.subTipo = subTipo;
     }
 
     iniciarLocal(){
         if(this.parametros?.continua){
             this.dados = new FreqCont(
-                this.grafico.coluna.registros as number[],this.parametros.intervalos,this.parametros.excluir
+                this.coluna.registros as number[],this.parametros.intervalos,this.parametros.excluir
             )
             .toDiscreta().freqs;
         }
         else {
-            this.dados = new FreqDiscr(this.grafico.coluna.registros,this.parametros?.excluir,this.parametros?.marcarAusentes).freqs;
+            this.dados = new FreqDiscr(this.coluna.registros,this.parametros?.excluir,this.parametros?.marcarAusentes).freqs;
         }
         this.valorMin = Math.min(...this.dados.map(d=>d.valor));
         this.valorMax = Math.max(...this.dados.map(d=>d.valor));

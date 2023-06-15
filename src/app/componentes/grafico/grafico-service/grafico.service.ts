@@ -1,37 +1,42 @@
 import { ElementRef } from "@angular/core";
-import { Parametros } from "src/app/modelo/opc/Parametros";
-import { OpcTipoEnum } from "src/app/modelo/opc/OpcTipoEnum";
+import { Parametros } from "src/app/modelo/operacao/Operacao";
+import { OperacaoTipoEnum } from "src/app/modelo/operacao/OperacaoTipoEnum";
 import { CorRepository } from "src/app/repository/cor.repository";
-import { Grafico } from "../grafico-modelo/Grafico";
 import { NumeroUtil } from "src/app/utils/numero-util";
+import { Coluna } from "src/app/modelo/entidade/coluna/Coluna";
 
 export abstract class GraficoService{
 
-    tipo:OpcTipoEnum;
+    protected operacaoTipo:OperacaoTipoEnum;
+    protected corRepository = new CorRepository();
     canvasEl: ElementRef<HTMLCanvasElement>;
     ctx: CanvasRenderingContext2D;
-    grafico:Grafico;
+    coluna:Coluna;
     width = 550;
     height = 400;
     fonte = '12px arial';
     linhaTamanho = 2;
     borda = 20;
-    parametros?:Parametros;
-    protected corRepository = new CorRepository();
     casasDecimais=2;
     formatador = NumeroUtil.formatador(this.casasDecimais);
-
-
+    dependeDe?:Coluna;
+    
     constructor(
-        tipo:OpcTipoEnum,
         canvasEl: ElementRef<HTMLCanvasElement>,
-        grafico:Grafico
+        coluna:Coluna,
+        dependeDe?:Coluna
     ){
-        this.tipo = tipo;
         this.canvasEl = canvasEl;
-        this.grafico = grafico;
-        this.parametros = this.grafico.coluna.operacoes.find(op=>op.tipo===this.tipo).parametros;
+        this.coluna = coluna;
+        this.dependeDe = dependeDe;
         this.desenhar();
+    }
+
+    get parametros():Parametros{ 
+        if(this.operacaoTipo===undefined){
+            throw Error(`Operacão não definida: coluna ${this.coluna.nome}`);
+        }
+        return this.coluna.operacoes.find(op=>op.tipo===this.operacaoTipo).parametros;
     }
 
     get widthUtil():number{ return this.width - 2*this.borda; }

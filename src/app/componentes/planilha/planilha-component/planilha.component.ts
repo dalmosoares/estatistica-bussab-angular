@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Entidade } from 'src/app/modelo/entidade/Entidade';
-import { Opc } from 'src/app/modelo/opc/Opc';
+import { Operacao } from 'src/app/modelo/operacao/Operacao';
 import { Planilha } from '../Planilha';
 
 
@@ -12,7 +12,7 @@ import { Planilha } from '../Planilha';
 export class PlanilhaComponent {
 
   @Input() public entidade:Entidade;
-  @Input() public opc:Opc;
+  @Input() public opc:Operacao;
   @Input() public planilha:Planilha;
 
 }

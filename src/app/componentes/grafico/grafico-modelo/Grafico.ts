@@ -1,10 +1,10 @@
 import { Coluna } from "src/app/modelo/entidade/coluna/Coluna";
-import { OpcTipoEnum } from "src/app/modelo/opc/OpcTipoEnum";
+import { OperacaoTipoEnum } from "src/app/modelo/operacao/OperacaoTipoEnum";
 
 
 export interface Grafico{
     titulo:string;
     coluna:Coluna;
-    tipo:OpcTipoEnum;
+    tipo:OperacaoTipoEnum;
     excluir?:any;
 }

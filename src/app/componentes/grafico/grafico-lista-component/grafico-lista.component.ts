@@ -2,7 +2,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 import { Entidade } from 'src/app/modelo/entidade/Entidade';
 import { Tabela } from 'src/app/modelo/entidade/tabela/Tabela';
 import { Coluna } from 'src/app/modelo/entidade/coluna/Coluna';
-import { Opc } from 'src/app/modelo/opc/Opc';
+import { Operacao } from 'src/app/modelo/operacao/Operacao';
 import { EntidadeAcoes } from 'src/app/modelo/entidade/EntidadeAcoes';
 import { EntidadeTipoEnum } from 'src/app/modelo/entidade/EntidadeTipoEnum';
 import { Grafico } from '../grafico-modelo/Grafico';
@@ -17,37 +17,36 @@ import { TabelaRepository } from 'src/app/repository/tabela.repository';
 export class GraficoListaComponent implements OnInit{
 
   @Input() public entidade:Entidade;
-  @Input() public opc:Opc;
+  @Input() public opc:Operacao;
   
-  private tabelas:Tabela[];
-  private tabela:Tabela;
-  private colunas:Coluna[];
+  public graficos:Grafico[];
 
   constructor(
     private tabelaRepository:TabelaRepository
   ) { 
-
+    console.log("GraficoListaComponent");
   }
+
   ngOnInit(): void {
     this.tabelaRepository.tabelas.subscribe(
-      tabelas=>this.tabelas=tabelas
-    );
-  }
+      tabelas=>{
+        if(tabelas){
+          const lista:Grafico[]= [];
+          const tipoTabela = new EntidadeAcoes(this.entidade).tipo==EntidadeTipoEnum.TABELA;
+          const tabela = tabelas.find(
+            t => t.nome == (tipoTabela?this.entidade.nome:(this.entidade as Coluna).nomeTabela)
+          );
+          const colunas = tipoTabela?tabela.colunas:[this.entidade as Coluna];
+          colunas.filter(
+            coluna=>coluna.operacoes.find(opc1=>opc1.tipo==this.opc.tipo)
+          ).forEach(coluna=>{
+            lista.push({'titulo':`${this.opc.tipo} coluna ${coluna.nome}`,coluna,tipo:this.opc.tipo});
+          });
+          this.graficos = lista;
+        }
 
-  get graficoLista():Grafico[]{
-    if(!this.tabelas) return;
-    const lista:Grafico[]= [];
-    const tipoTabela = new EntidadeAcoes(this.entidade).tipo==EntidadeTipoEnum.TABELA;
-    this.tabela = this.tabelas.find(
-      t => t.nome == (tipoTabela?this.entidade.nome:(this.entidade as Coluna).nomeTabela)
+      }
     );
-    this.colunas = tipoTabela?this.tabela.colunas:[this.entidade as Coluna];
-    this.colunas.filter(
-      coluna=>coluna.operacoes.find(opc1=>opc1.tipo==this.opc.tipo)
-    ).forEach(coluna=>{
-      lista.push({'titulo':`${this.opc.tipo} coluna ${coluna.nome}`,coluna,tipo:this.opc.tipo});
-    });
-    return lista;
   }
 
 }

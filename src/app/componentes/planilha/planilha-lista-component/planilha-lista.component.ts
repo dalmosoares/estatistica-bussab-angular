@@ -7,8 +7,8 @@ import { Tabela } from 'src/app/modelo/entidade/tabela/Tabela';
 import { TabelaAcoes } from 'src/app/modelo/entidade/tabela/TabelaAcoes';
 import { FreqCont } from 'src/app/modelo/freq/FreqCont';
 import { FreqDiscr } from 'src/app/modelo/freq/FreqDiscr';
-import { Opc } from 'src/app/modelo/opc/Opc';
-import { OpcTipoEnum } from 'src/app/modelo/opc/OpcTipoEnum';
+import { Operacao } from 'src/app/modelo/operacao/Operacao';
+import { OperacaoTipoEnum } from 'src/app/modelo/operacao/OperacaoTipoEnum';
 import { ArrayUtil } from 'src/app/utils/array-util';
 import { Planilha } from '../Planilha';
 import { TabelaRepository } from 'src/app/repository/tabela.repository';
@@ -22,7 +22,7 @@ import { TabelaRepository } from 'src/app/repository/tabela.repository';
 export class PlanilhaListaComponent implements OnInit {
 
   @Input() public entidade:Entidade;
-  @Input() public opc:Opc;
+  @Input() public opc:Operacao;
   planilhas:Planilha[];
 
   constructor(
@@ -34,7 +34,7 @@ export class PlanilhaListaComponent implements OnInit {
     if( !this.entidade || !this.opc) return;
     const entidadeAcoes = new EntidadeAcoes(this.entidade);
     
-    if(this.opc.tipo==OpcTipoEnum.LISTA){  
+    if(this.opc.tipo==OperacaoTipoEnum.LISTA){  
 
       if(entidadeAcoes.tipo==EntidadeTipoEnum.TABELA){
         const tabela  = this.entidade as Tabela;
@@ -64,7 +64,7 @@ export class PlanilhaListaComponent implements OnInit {
 
     }
 
-    if(this.opc.tipo==OpcTipoEnum.FREQDISCRETA){ 
+    if(this.opc.tipo==OperacaoTipoEnum.FREQDISCRETA){ 
 
       if(entidadeAcoes.tipo==EntidadeTipoEnum.COLUNA){
         this.planilhas = [this.getFreqDiscrFromColuna(this.entidade as Coluna)]
@@ -81,7 +81,7 @@ export class PlanilhaListaComponent implements OnInit {
 
     }
 
-    if(this.opc.tipo==OpcTipoEnum.FREQCONTINUA){ 
+    if(this.opc.tipo==OperacaoTipoEnum.FREQCONTINUA){ 
       if(entidadeAcoes.tipo==EntidadeTipoEnum.COLUNA){
         this.planilhas = this.getFreqCont(this.entidade as Coluna);
       }
@@ -104,7 +104,7 @@ export class PlanilhaListaComponent implements OnInit {
   private getFreqDiscrFromColuna(coluna:Coluna):Planilha{
     const format2Dec = new Intl.NumberFormat('pt-BR',{style:'decimal',minimumFractionDigits:2,maximumFractionDigits:2});
     const format4Dec = new Intl.NumberFormat('pt-BR',{style:'decimal',minimumFractionDigits:4,maximumFractionDigits:4});
-    const opc = coluna.operacoes.find(op=>op.tipo==OpcTipoEnum.FREQDISCRETA);
+    const opc = coluna.operacoes.find(op=>op.tipo==OperacaoTipoEnum.FREQDISCRETA);
     const freqArray = new FreqDiscr(coluna.registros,opc.parametros?.excluir).freqs;
     const titulo = `Freq Discreta de ${coluna.nome}`;
     const tabelaView:Planilha = {campos:["Valor","Frequência","Proporção","Porcentagem"],linhas:[],titulo};
@@ -131,7 +131,7 @@ export class PlanilhaListaComponent implements OnInit {
           linhas:[],titulo
       };
       coluna.operacoes
-          .filter(opc=>opc.tipo==OpcTipoEnum.FREQCONTINUA)
+          .filter(opc=>opc.tipo==OperacaoTipoEnum.FREQCONTINUA)
           .forEach(opc=>{
             const fc = new FreqCont(coluna.registros as number[],opc.parametros.intervalos,opc.parametros.excluir);
               fc.freqs.forEach(fci=>{

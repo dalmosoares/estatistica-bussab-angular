@@ -13,8 +13,7 @@
                 {
                     "tipo":"ramosfolhas",
                     "parametros":{
-                        "digitosFolha":1,
-                        "dividirPor":10
+                        "digitosFolha":1
                     }
                 },
                 {
@@ -25,6 +24,27 @@
                         "yCoordDiv":5,
                         "yCoordMarca":5,
                         "areaNaoUnitaria":true
+                    }
+                },
+                {
+                    "tipo":"grafico_dispersao_unidimensional1",
+                    "parametros":{
+                        "excluir":"-",
+                        "marcarAusentes":true
+                    }
+                },
+                {
+                    "tipo":"grafico_dispersao_unidimensional2",
+                    "parametros":{
+                        "excluir":"-",
+                        "marcarAusentes":true
+                    }
+                },
+                {
+                    "tipo":"grafico_dispersao_unidimensional3",
+                    "parametros":{
+                        "excluir":"-",
+                        "marcarAusentes":true
                     }
                 }
             ]

@@ -2,9 +2,10 @@ import { ElementRef } from "@angular/core";
 import { FreqDiscr } from "src/app/modelo/freq/FreqDiscr";
 import { FreqDiscrItem } from "src/app/modelo/freq/FreqDiscrItem";
 import { GraficoService } from "./grafico.service";
-import { OpcTipoEnum } from "src/app/modelo/opc/OpcTipoEnum";
+import { OperacaoTipoEnum } from "src/app/modelo/operacao/OperacaoTipoEnum";
 import { FreqCont } from "src/app/modelo/freq/FreqCont";
 import { Grafico } from "../grafico-modelo/Grafico";
+import { Coluna } from "src/app/modelo/entidade/coluna/Coluna";
 
 type GraficoBarraItem = {
     rotulo:string,
@@ -16,6 +17,7 @@ type GraficoBarraItem = {
 };
 export class GraficoBarraService extends GraficoService{
 
+    protected override operacaoTipo=OperacaoTipoEnum.GRAFICO_BARRA;
     override borda = 30;
     marcaTamanho = 8;
 
@@ -31,14 +33,12 @@ export class GraficoBarraService extends GraficoService{
     yCoordDiv = 0.5;
     yCoordMarca = 1;
 
-    get continua():boolean{ return this.parametros?.continua!=undefined && this.parametros?.continua; }
-
     constructor(
-        grafico:Grafico,
+        coluna:Coluna,
         canvasEl: ElementRef<HTMLCanvasElement>
     ){
-        super(OpcTipoEnum.GRAFICO_BARRA,canvasEl,grafico);
-        this.dados = new FreqDiscr(this.grafico.coluna.registros,this.parametros?.excluir).freqs;  
+        super(canvasEl,coluna);
+        this.dados = new FreqDiscr(this.coluna.registros,this.parametros?.excluir).freqs;  
         if(this.parametros?.yCoordDiv!=undefined){
             this.yCoordDiv = this.parametros?.yCoordDiv;
         }
@@ -52,12 +52,12 @@ export class GraficoBarraService extends GraficoService{
     }
 
     gerarItems(): void {
-        if(this.continua){
+        if(this.parametros?.continua!=undefined && this.parametros?.continua){
             if(this.parametros?.intervalos==undefined){
                 throw new Error("Erro GraficoBarra com váriavel contínua mas sem intervalos!");
             }
             this.dados = new FreqCont(
-                    this.grafico.coluna.registros as number[],
+                    this.coluna.registros as number[],
                     this.parametros.intervalos,this.parametros.excluir                
                 ).freqs.map(fci=>({
                     valor:fci.pontoMedio,
@@ -67,7 +67,7 @@ export class GraficoBarraService extends GraficoService{
                 }));
         }else{
             this.dados = new FreqDiscr(
-                this.grafico.coluna.registros,this.parametros?.excluir,this.parametros?.marcarAusentes
+                this.coluna.registros,this.parametros?.excluir,this.parametros?.marcarAusentes
             ).freqs;
         }
         const freqMax = Math.max(...this.dados.map(d=>d.freq));

@@ -3,12 +3,12 @@ import { MatTabGroup } from '@angular/material/tabs';
 import { Entidade } from 'src/app/modelo/entidade/Entidade';
 import { EntidadeAcoes } from 'src/app/modelo/entidade/EntidadeAcoes';
 import { EntidadeTipoEnum } from 'src/app/modelo/entidade/EntidadeTipoEnum';
-import { Opc } from 'src/app/modelo/opc/Opc';
-import { OpcTipoSaidaEnum } from 'src/app/modelo/opc/OpcTipoSaidaEnum';
+import { Operacao } from 'src/app/modelo/operacao/Operacao';
+import { OperacaoTipoSaidaEnum } from 'src/app/modelo/operacao/OperacaoTipoSaidaEnum';
 import { environment } from 'src/environments/environment';
 
 type Tab = {
-  'opc':Opc,
+  'opc':Operacao,
   'indice':number,
   'label':string
 };
@@ -28,9 +28,9 @@ export class GuiaListaComponent implements OnChanges,DoCheck {
 
   public tabs:Tab[];
 
-  public saidaTabela = OpcTipoSaidaEnum.TABELA;
-  public saidaGrafico = OpcTipoSaidaEnum.GRAFICO;
-  public saidaRamosfolhas = OpcTipoSaidaEnum.RAMOSFOLHAS;
+  public saidaTabela = OperacaoTipoSaidaEnum.TABELA;
+  public saidaGrafico = OperacaoTipoSaidaEnum.GRAFICO;
+  public saidaRamosfolhas = OperacaoTipoSaidaEnum.RAMOSFOLHAS;
   public entidadeTipo: EntidadeTipoEnum;
   private inicio = true;
 

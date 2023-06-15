@@ -1,14 +1,14 @@
 import { Injectable } from "@angular/core";
-import { Opc } from "../modelo/opc/Opc";
-import { OpcRepository } from "./opc.repository";
+import { Operacao } from "../modelo/operacao/Operacao";
+import { OperacaoRepository } from "./operacao.repository";
 import { HttpClient } from "@angular/common/http";
 import { Observable, catchError, concatMap, find, map, mergeMap, of, onErrorResumeNext } from 'rxjs';
 import { Tabela } from "../modelo/entidade/tabela/Tabela";
 import { TabelaAcoes } from "../modelo/entidade/tabela/TabelaAcoes";
 import { Coluna } from "../modelo/entidade/coluna/Coluna";
 import { TabelaOpcRecebe } from "./recebe/TabelaOpcRecebe";
-import { OpcRecebe } from "./recebe/OpcRecebe";
-import { OpcTipoEnum } from "../modelo/opc/OpcTipoEnum";
+import { OpcRecebe } from "./recebe/TabelaOpcRecebe";
+import { OperacaoTipoEnum } from "../modelo/operacao/OperacaoTipoEnum";
 import { RxjsUtil } from "../utils/rxjs-util";
 
 type TabelaCarregar = {
@@ -25,6 +25,7 @@ export class TabelaRepository{
         {nome:'cd01-brasil'},
         {nome:'cd02-populacoes-municipios-brasil'},
         {nome:'cd03-notas'},
+        {nome:'cd04-saopaulo-popuicao-temperatura'},
         {nome:'exemplo2-9-dureza'},
         {nome:'exe-2-4-erros-impressao'},
         {nome:'exe-2-6-taxa-media-incremento-anual'}
@@ -33,7 +34,7 @@ export class TabelaRepository{
     private _tabelas:Observable<Tabela[]>;
 
     constructor(
-        private opcRepository:OpcRepository,
+        private opcRepository:OperacaoRepository,
         private http: HttpClient
     ){}
 
@@ -82,23 +83,25 @@ export class TabelaRepository{
             const coluna = tabela.colunas.find(c=>c.nome==colunaOpcRecebe.nomeColuna);
             if(coluna!=undefined){
                 colunaOpcRecebe.operacoes.forEach(opcRecebe=>{
-                    tabelaAcoes.addOperacaoColuna(coluna,this.opcRecebeParaOpc(opcRecebe));
+                    tabelaAcoes.addOperacaoColuna(coluna,this.opcRecebeParaOpc(opcRecebe,tabela));
                 });
             }
         });
         // Operações em tabela decorrentes de operações recebidas em colunas
-        if(tabelaAcoes.tabela.colunas.find(c=>c.operacoes.find(opc=>opc.tipo==OpcTipoEnum.FREQCONTINUA))){
-            tabelaAcoes.addOperacao(this.opcRepository.getByTipo(OpcTipoEnum.FREQCONTINUA));
+        if(tabelaAcoes.tabela.colunas.find(c=>c.operacoes.find(opc=>opc.tipo==OperacaoTipoEnum.FREQCONTINUA))){
+            tabelaAcoes.addOperacao(this.opcRepository.getByTipo(OperacaoTipoEnum.FREQCONTINUA));
         }
     }
 
-    private opcRecebeParaOpc(opcRecebe:OpcRecebe):Opc{
+    private opcRecebeParaOpc(opcRecebe:OpcRecebe,tabela:Tabela):Operacao{
         const opc = this.opcRepository.getByTipo(opcRecebe.tipo);
         if(opc===undefined){
             throw Error(`sem operação do tipo ${opcRecebe.tipo}`);
         }
-        opc.tipo = opcRecebe.tipo;
         opc.parametros = opcRecebe.parametros;
+        if(opc.tipo == OperacaoTipoEnum.GRAFICO_LIGADO && opc.parametros?.dependeDe!=undefined){
+            opc.parametros.dependeDeColuna = tabela.colunas.find(c=>c.nome==opc.parametros.dependeDe)
+        }
         return opc;
     }
 

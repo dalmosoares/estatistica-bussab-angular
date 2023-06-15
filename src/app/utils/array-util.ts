@@ -19,4 +19,8 @@ export class ArrayUtil{
         return a;
     }
 
+    public static menorDif(a:number[]):number{
+        return Math.min(...a.map((v,i)=>i>0?Math.abs(v-a[i-1]):Number.MAX_VALUE));
+    }
+
 }

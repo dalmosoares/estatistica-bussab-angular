@@ -4,8 +4,8 @@ import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree'
 import { Menu } from 'src/app/modelo/menu/Menu';
 import { Entidade } from 'src/app/modelo/entidade/Entidade';
 import { EntidadeAcoes } from 'src/app/modelo/entidade/EntidadeAcoes';
-import { environment } from 'src/environments/environment';
 import { TabelaRepository } from 'src/app/repository/tabela.repository';
+import { environment } from 'src/environments/environment';
 
 type MenuMat = {
   nome: string;

@@ -1,25 +1,21 @@
 import { Tabela } from "./Tabela";
 import { ColunaTipoDadoEnum } from "../coluna/ColunaTipoDadoEnum";
 import { Coluna } from "../coluna/Coluna";
-import { Opc } from "src/app/modelo/opc/Opc";
+import { Operacao } from "src/app/modelo/operacao/Operacao";
 import { Menu } from "src/app/modelo/menu/Menu";
+import { environment } from "src/environments/environment";
 
 export class TabelaAcoes{
 
     public static criar(nome:string,registros:any[]):Tabela{
-        this.adicionarColunaIdentificadora(registros);
+
         const LINHA_REFERENCIA_INDICE = 0;
         const COLUNA_CONTROLE_INDICE = 0;
         const linhaReferencia = registros[LINHA_REFERENCIA_INDICE];
-        let campos = Object.keys(registros[LINHA_REFERENCIA_INDICE]);
+        const regs = this.adicionarColunaId(registros,LINHA_REFERENCIA_INDICE,environment.coluna_id_nome);
+        let campos = Object.keys(regs[LINHA_REFERENCIA_INDICE]);
         let nomeColunaControle = campos[COLUNA_CONTROLE_INDICE];
-        
-        if(campos.length==1){
-            registros = registros.map(
-                (registro,i) => Object.defineProperty(registro,"id",{value:i+1})
-            );
-            campos = ["id"].concat(campos);
-        }
+
         return {
             nome,
             nomeColunaControle,
@@ -28,7 +24,7 @@ export class TabelaAcoes{
                     nome:nomeCampo,
                     tipoDado:isNaN(linhaReferencia[nomeCampo])?ColunaTipoDadoEnum.TEXTO:ColunaTipoDadoEnum.NUMERO,
                     nomeTabela:nome,
-                    registros:registros.map(x=>x[nomeCampo]),
+                    registros:regs.map(x=>x[nomeCampo]),
                     operacoes:[]
                 })    
             ),
@@ -47,17 +43,21 @@ export class TabelaAcoes{
         this.colunaControleNome = this.tabela.colunas[this.COLUNA_CONTROLE_INDICE].nome;
     }
     
-    private static adicionarColunaIdentificadora(registros:any[]){
-
+    private static adicionarColunaId(registros:any[],indice_linha_referencia:number,colunaIdNome:string):any[]{
+        let campos = Object.keys(registros[indice_linha_referencia]);
+        return (campos.length==1 || !campos.includes(colunaIdNome)) ?
+            registros.map(
+                (registro,i) => Object.assign({[colunaIdNome]:i+1},registro)
+            ):registros;
     }
 
-    addOperacao(operacao:Opc){
+    addOperacao(operacao:Operacao){
         if(!this.tabela.operacoes.find(op=>op.tipo==operacao.tipo)){
             this.tabela.operacoes.push(operacao);
         }
     }
 
-    addOperacaoColuna(coluna:Coluna,operacao:Opc){
+    addOperacaoColuna(coluna:Coluna,operacao:Operacao){
         if(coluna==undefined||operacao==undefined){
             throw Error("addOperacaoColuna com coluna ou operacao undefined");
         }

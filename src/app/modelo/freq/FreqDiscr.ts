@@ -8,11 +8,26 @@ export class FreqDiscr{
   registros:(string|number)[];
   marcarAusentes?:boolean;
   excluir?:any;
+  diferentes:(string|number)[];
+  freqs:FreqDiscrItem[];
 
   constructor(registros:(string|number)[],excluir?:any,marcarAusentes?:boolean){
     this.registros = registros.filter(r=>excluir==undefined || r!=excluir);
     this.marcarAusentes = marcarAusentes;
     this.excluir = excluir;
+    this.diferentes = ArrayUtil.distintos(this.registros).sort((v1,v2)=>
+      NumeroUtil.ehNumero(v1) && NumeroUtil.ehNumero(v2) ?
+      (v1 as number) - (v2 as number) :
+      v1.toString().localeCompare(v2.toString())
+    );
+    this.freqs = this.diferentes.map(valor=>{
+      const freq = this.registros.filter(u=>u==valor).length;
+      const prop = freq/this.registros.length;
+      return {valor,freq,prop,porcent:prop*100};
+    });
+    if(this.marcarAusentes){
+      this.freqs = this.executarMarcarAusentes(this.freqs);
+    }
   }
 
   executarMarcarAusentes(dados:FreqDiscrItem[]):FreqDiscrItem[]{
@@ -27,20 +42,11 @@ export class FreqDiscr{
     return dados.concat(excluidos).sort((a,b)=>a.valor-b.valor);
   }
 
-  get freqs():FreqDiscrItem[]{
-    const saida = ArrayUtil.distintos(this.registros).sort((v1,v2)=>
-      NumeroUtil.ehNumero(v1) && NumeroUtil.ehNumero(v2) ?
-      (v1 as number) - (v2 as number) :
-      v1.toString().localeCompare(v2.toString())
-    ).map(valor=>{
-      const freq = this.registros.filter(u=>u==valor).length;
-      const prop = freq/this.registros.length;
-      return {valor,freq,prop,porcent:prop*100};
-    });
-    return this.marcarAusentes?this.executarMarcarAusentes(saida):saida;
-  }
-
-  toCont(extremos:number[]):FreqCont{
+  toCont():FreqCont{
+    const minDif = ArrayUtil.menorDif(this.diferentes as number[]);
+    let extremos:number[] = ArrayUtil.distintos((this.diferentes as number[]).flatMap(v=>[v-minDif/2,v+minDif/2]));
+    //throw new Error(`FreqDiscr toCont - fazendo`);
+  
     return new FreqCont(this.registros as number[],extremos);
   }
 

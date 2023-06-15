@@ -1,4 +1,4 @@
-import { Opc } from "src/app/modelo/opc/Opc";
+import { Operacao } from "src/app/modelo/operacao/Operacao";
 import { ColunaTipoDadoEnum } from "./ColunaTipoDadoEnum";
 
 export interface Coluna{
@@ -6,5 +6,5 @@ export interface Coluna{
     tipoDado:ColunaTipoDadoEnum;
     nomeTabela:string;
     registros:(number|string)[];
-    operacoes:Opc[];
+    operacoes:Operacao[];
 }

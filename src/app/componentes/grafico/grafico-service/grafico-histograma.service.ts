@@ -1,10 +1,11 @@
 import { GraficoService } from "./grafico.service";
 import { ElementRef } from "@angular/core";
 import { FreqCont } from "src/app/modelo/freq/FreqCont";
-import { OpcTipoEnum } from "src/app/modelo/opc/OpcTipoEnum";
+import { OperacaoTipoEnum } from "src/app/modelo/operacao/OperacaoTipoEnum";
 import { Grafico } from "../grafico-modelo/Grafico";
 import { FreqDiscr } from "src/app/modelo/freq/FreqDiscr";
 import { ArrayUtil } from "src/app/utils/array-util";
+import { Coluna } from "src/app/modelo/entidade/coluna/Coluna";
 
 type xCoordDesenhar = {
     x:number,
@@ -24,7 +25,7 @@ type GraficoHistogramaItem = {
 };
 export class GraficoHistogramaService extends GraficoService{
 
-    override tipo=OpcTipoEnum.HISTOGRAMA;
+    override operacaoTipo=OperacaoTipoEnum.HISTOGRAMA;
     freqCont:FreqCont;
     xCoord:xCoordDesenhar[];
     yCoord:yCoordDesenhar[];
@@ -49,10 +50,10 @@ export class GraficoHistogramaService extends GraficoService{
     tolerancia=1e-5;
 
     constructor(
-        grafico:Grafico,
+        coluna:Coluna,
         canvasEl: ElementRef<HTMLCanvasElement>
     ){
-        super(OpcTipoEnum.HISTOGRAMA,canvasEl,grafico);
+        super(canvasEl,coluna);
     }
 
     override iniciarLocal(): void {
@@ -63,10 +64,14 @@ export class GraficoHistogramaService extends GraficoService{
         if(this.parametros?.yCoordMarca!=undefined){
             this.yCoordMarca = this.parametros?.yCoordMarca;
         }
-        this.freqCont = new FreqCont(this.grafico.coluna.registros as number[],this.parametros.intervalos,this.parametros.excluir);
+
         if(this.parametros?.discreta){
-            this.freqCont = new FreqDiscr(this.grafico.coluna.registros,this.parametros?.excluir,this.parametros?.marcarAusentes).toCont(this.parametros.intervalos);
+            this.freqCont = new FreqDiscr(this.coluna.registros,this.parametros?.excluir,this.parametros?.marcarAusentes)
+            .toCont();
+        }else{
+            this.freqCont = new FreqCont(this.coluna.registros as number[],this.parametros.intervalos,this.parametros.excluir);
         }
+        
     }
 
     override eixoX(): void {
@@ -160,20 +165,23 @@ export class GraficoHistogramaService extends GraficoService{
 
     private gerarEscalaX(){
         let rotular = this.parametros?.xCoordDiv==undefined;
-        
-        this.xCoord = this.freqCont.freqs.map(fci=>{
-            const x = this.parametros?.discreta != undefined ? (fci.intervaloInicio+fci.intervaloFim)/2:fci.intervaloInicio;
-            const valor = this.parametros?.discreta != undefined ? fci.prop : undefined;
-            rotular ||= x%this.parametros?.xCoordDiv==0;
-            return {x,rotular,valor};                
-        });
 
-        if(!this.parametros?.discreta){
-            this.xCoord.push({
-                x:this.freqCont.freqs[this.freqCont.freqs.length-1].intervaloFim,
-                rotular
+        if(this.parametros?.discreta != undefined){
+            this.xCoord = this.freqCont.freqs.map(fci=>{
+                const x = (fci.intervaloInicio+fci.intervaloFim)/2;
+                const valor = fci.pontoMedio;
+                rotular ||= x%this.parametros?.xCoordDiv==0;
+                return {x,valor,rotular};
+            });
+        }else{
+            this.xCoord = ArrayUtil.distintos(
+                this.freqCont.freqs.flatMap(fci=>[fci.intervaloInicio,fci.intervaloFim])
+            ).map(x=>{
+                rotular ||= x%this.parametros?.xCoordDiv==0;
+                return {x,valor:undefined,rotular};
             });
         }
+        
         this.xVirtualMin = Math.min(...this.xCoord.map(c=>c.x));
         if(this.xVirtualMin>0){
             this.xCoord.push({x:0,rotular});

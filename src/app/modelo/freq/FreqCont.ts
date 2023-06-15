@@ -1,6 +1,4 @@
 import { ArrayUtil } from "src/app/utils/array-util";
-import { Coluna } from "../entidade/coluna/Coluna";
-import { Parametros } from "../opc/Parametros";
 import { FreqContItem } from "./FreqContItem";
 import { FreqDiscr } from "./FreqDiscr";
 
@@ -23,6 +21,9 @@ export class FreqCont{
     }
 
     get freqs():FreqContItem[]{
+        if(this.intervalos==undefined){
+            throw new Error(`Erro em FreqCont: intervalos nulo`);
+        }
         return this.intervalos.map(intervalo=>{
             const freq = (this.registros as number[]).filter(n=>n>=intervalo.inicio && n<intervalo.fim ).length;
             const amplitude = intervalo.fim - intervalo.inicio;
