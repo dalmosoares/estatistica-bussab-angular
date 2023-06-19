@@ -1,4 +1,11 @@
-import { Tabela } from "./tabela/Tabela";
-import { Coluna } from "./coluna/Coluna";
+import { Menu } from "../menu/Menu";
+import { Operacao } from "../operacao/Operacao";
+import { EntidadeTipoEnum } from "./EntidadeTipoEnum";
 
-export type Entidade = Tabela | Coluna;
+export interface Entidade{
+  tipo: EntidadeTipoEnum;
+  nome:string;
+  operacoes:Operacao[];
+  numRegistros:number;
+  toMenu():Menu;
+}

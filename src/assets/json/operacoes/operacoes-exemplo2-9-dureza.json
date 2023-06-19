@@ -1,8 +1,8 @@
 {
     "nomeTabela":"exemplo2-9-dureza",
-    "operacoesColuna":[
+    "colunas":[
         {
-            "nomeColuna":"dureza",
+            "nome":"dureza",
             "operacoes":[
                 {
                     "tipo":"ramosfolhas",

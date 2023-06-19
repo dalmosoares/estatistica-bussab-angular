@@ -26,7 +26,7 @@ export class GraficoComponent implements AfterViewInit {
 
   ngAfterViewInit(){
     try{
-      if(this.opc.tipo == OperacaoTipoEnum.GRAFICO_LIGADO){
+      if(this.opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_LIGADO){
         if(!this.opc.parametros?.dependeDeColuna){
           throw new Error(`Grafico ligado sem parâmetro 'dependeDeColunas': coluna ${this.grafico.coluna.nome}`);
         }
@@ -36,40 +36,40 @@ export class GraficoComponent implements AfterViewInit {
           this.opc.parametros.dependeDeColuna
         );
       }
-      if(this.opc.tipo == OperacaoTipoEnum.GRAFICO_BARRA){
+      if(this.opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_BARRA){
         this.graficoService = new GraficoBarraService(
           this.grafico.coluna,
           this.canvasEl
         );
       }
-      if(this.opc.tipo == OperacaoTipoEnum.GRAFICO_PIZZA){
+      if(this.opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_PIZZA){
         this.graficoService = new GraficoPizzaService(
           this.grafico.coluna,
           this.canvasEl
         );
       }
-      if(this.opc.tipo == OperacaoTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL1){
+      if(this.opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL1){
         this.graficoService = new DispersaoUnidimensionalService(
           this.grafico.coluna,
           this.canvasEl,
           1
         );
       }
-      if(this.opc.tipo == OperacaoTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL2){
+      if(this.opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL2){
         this.graficoService = new DispersaoUnidimensionalService(
           this.grafico.coluna,
           this.canvasEl,
           2
         );
       }
-      if(this.opc.tipo == OperacaoTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL3){
+      if(this.opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL3){
         this.graficoService = new DispersaoUnidimensionalService(
           this.grafico.coluna,
           this.canvasEl,
           3
         );
       }
-      if(this.opc.tipo == OperacaoTipoEnum.HISTOGRAMA){
+      if(this.opc.descricao.tipo == OperacaoTipoEnum.HISTOGRAMA){
         this.graficoService = new GraficoHistogramaService(
           this.grafico.coluna,
           this.canvasEl

@@ -1,8 +1,8 @@
 {
     "nomeTabela":"exe-2-6-taxa-media-incremento-anual",
-    "operacoesColuna":[
+    "colunas":[
         {
-            "nomeColuna":"incremento",
+            "nome":"incremento",
             "operacoes":[
                 {
                     "tipo":"freqcontinua",

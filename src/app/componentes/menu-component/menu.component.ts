@@ -3,7 +3,6 @@ import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
 import { Menu } from 'src/app/modelo/menu/Menu';
 import { Entidade } from 'src/app/modelo/entidade/Entidade';
-import { EntidadeAcoes } from 'src/app/modelo/entidade/EntidadeAcoes';
 import { TabelaRepository } from 'src/app/repository/tabela.repository';
 import { environment } from 'src/environments/environment';
 
@@ -46,7 +45,7 @@ export class MenuComponent implements OnInit{
 
   ngOnInit(): void {
     this.tabelaRepository.tabelas.subscribe(tabelas=>{
-      this.dataSource.data = tabelas.map(t=>new EntidadeAcoes(t).toMenu());
+      this.dataSource.data = tabelas.map(t=>t.toMenu());
       this.ativarPadrao();
     });
   }

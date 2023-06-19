@@ -2,9 +2,8 @@ import { Injectable } from "@angular/core";
 import { Operacao } from "../modelo/operacao/Operacao";
 import { OperacaoRepository } from "./operacao.repository";
 import { HttpClient } from "@angular/common/http";
-import { Observable, catchError, concatMap, find, map, mergeMap, of, onErrorResumeNext } from 'rxjs';
+import { Observable, combineLatest, map, onErrorResumeNext } from 'rxjs';
 import { Tabela } from "../modelo/entidade/tabela/Tabela";
-import { TabelaAcoes } from "../modelo/entidade/tabela/TabelaAcoes";
 import { Coluna } from "../modelo/entidade/coluna/Coluna";
 import { TabelaOpcRecebe } from "./recebe/TabelaOpcRecebe";
 import { OpcRecebe } from "./recebe/TabelaOpcRecebe";
@@ -25,81 +24,89 @@ export class TabelaRepository{
         {nome:'cd01-brasil'},
         {nome:'cd02-populacoes-municipios-brasil'},
         {nome:'cd03-notas'},
-        {nome:'cd04-saopaulo-popuicao-temperatura'},
+        {nome:'cd04-saopaulo-poluicao-temperatura'},
         {nome:'exemplo2-9-dureza'},
         {nome:'exe-2-4-erros-impressao'},
         {nome:'exe-2-6-taxa-media-incremento-anual'}
     ];
 
-    private _tabelas:Observable<Tabela[]>;
-
     constructor(
-        private opcRepository:OperacaoRepository,
         private http: HttpClient
     ){}
 
     get tabelas():Observable<Tabela[]>{
 
-        const tabelaArrayObs = RxjsUtil.converter(this.tabelasCarregar.map(tc=>
-            onErrorResumeNext(
-                this.http.get(`assets/json/tabelas/${tc.nome}.json`).pipe(
-                    map(json=>TabelaAcoes.criar(`${tc.nome}`,json as any[]))
-                ))
-            )
-        );
+        const tabelaObs = onErrorResumeNext(this.tabelasCarregar.map(tc=>    
+            this.http.get(`assets/json/tabelas/${tc.nome}.json`).pipe(
+                map(json=>new Tabela(`${tc.nome}`,json as any[]))
+            )   
+        ));
 
-        const tabelaOpcRecebeArrayObs = RxjsUtil.converter(this.tabelasCarregar.map(tc=>
+        const tabelaOpcRecebeObs = onErrorResumeNext(this.tabelasCarregar.map(tc=>    
             this.http.get(`assets/json/operacoes/operacoes-${tc.nome}.json`).pipe(
-                map(json=>json as TabelaOpcRecebe),
-                catchError(err=>of({nomeTabela:tc.nome,operacoesColuna:[]}))
-            ))
-        );
+                map(json=>json as TabelaOpcRecebe)
+            )   
+        ));
 
-        return tabelaOpcRecebeArrayObs.pipe(mergeMap(tabelaOpcRecebeArray=>
-            tabelaArrayObs.pipe(map(tabelaArray=>
-                tabelaArray.map(
-                    tabela => {
-                        const operacoes = tabelaOpcRecebeArray.find(tabelaOpcRecebe=>tabelaOpcRecebe.nomeTabela==tabela.nome);
-                        if(operacoes!=undefined){
-                            this.inserirOperacoes(tabela,operacoes);
-                        }
-                        return tabela;
-                   }
-                )                
-            ))
+        const tabelaArrayObs = RxjsUtil.gerarArray(tabelaObs);
+        const tabelaOpcRecebeArrayObs = RxjsUtil.gerarArray(tabelaOpcRecebeObs);
+
+        return combineLatest([tabelaArrayObs,tabelaOpcRecebeArrayObs])
+        .pipe(map(
+            x => this.inserirOperacoesRecebidas(x[0],x[1])        
         ));
         
     }
 
-    private inserirOperacoes(tabela:Tabela,tabelaOpcRecebe:TabelaOpcRecebe){
-        const tabelaAcoes = new TabelaAcoes(tabela);
-        // Operações padrão em tabelas e colunas
-        this.opcRepository.operacoesPadrao.forEach(opc=>{
-            tabelaAcoes.addOperacao(opc);
-            tabelaAcoes.tabela.colunas.forEach(c=>tabelaAcoes.addOperacaoColuna(c,opc));
+    private inserirOperacoesRecebidas(tabelas:Tabela[],tabelasOpcRecebe:TabelaOpcRecebe[]):Tabela[]{
+        return this.inserirOperacoesRecebidasTabelas(this.inserirOperacoesPadrao(tabelas),tabelasOpcRecebe);
+    }
+
+    private inserirOperacoesPadrao(tabelas:Tabela[]):Tabela[]{
+        return tabelas.map(tabela=>{            
+            OperacaoRepository.operacoesDescricaoPadrao().forEach(od=>{
+                tabela.addOperacao(new Operacao(od.tipo));
+                tabela.colunas.forEach(c=>c.adicionaOperacao(new Operacao(od.tipo)));
+            });
+            return tabela;
         });
-        // Operações recebidas de colunas
-        tabelaOpcRecebe.operacoesColuna.forEach(colunaOpcRecebe=>{
-            const coluna = tabela.colunas.find(c=>c.nome==colunaOpcRecebe.nomeColuna);
-            if(coluna!=undefined){
-                colunaOpcRecebe.operacoes.forEach(opcRecebe=>{
-                    tabelaAcoes.addOperacaoColuna(coluna,this.opcRecebeParaOpc(opcRecebe,tabela));
-                });
+    }
+
+    private inserirOperacoesRecebidasTabelas(tabelas:Tabela[],tabelasOpcRecebe:TabelaOpcRecebe[]):Tabela[]{
+        return tabelas.map(tabela=>{
+            const c = tabelas.find(t=>t.nome=='compania-mb').colunas.find(c=>c.nome=='salarioPorSalMin');
+            const opc = c.operacoes?.find(opc=>opc.descricao.tipo==OperacaoTipoEnum.FREQCONTINUA);
+            let tabelaOpcRecebe = tabelasOpcRecebe.find(tabelaOpcRecebe=>tabelaOpcRecebe.nomeTabela==tabela.nome);
+            if(tabelaOpcRecebe!=undefined){
+                this.inserirOperacoesRecebidasTabela(tabela,tabelaOpcRecebe);
             }
+            return tabela;
         });
+    }   
+
+    private inserirOperacoesRecebidasTabela(tabela:Tabela,tabelaOpcRecebe:TabelaOpcRecebe){
+        if(tabelaOpcRecebe.nomeTabela!=tabela.nome) return;
+        tabelaOpcRecebe.colunas?.forEach(colunaOpcRecebe=>
+            tabela.addOperacoesColuna(
+                colunaOpcRecebe.nome,
+                colunaOpcRecebe.operacoes.map(opcRecebe=>
+                    this.opcRecebeParaOpc(opcRecebe,tabela)
+                )
+            )
+        );
         // Operações em tabela decorrentes de operações recebidas em colunas
-        if(tabelaAcoes.tabela.colunas.find(c=>c.operacoes.find(opc=>opc.tipo==OperacaoTipoEnum.FREQCONTINUA))){
-            tabelaAcoes.addOperacao(this.opcRepository.getByTipo(OperacaoTipoEnum.FREQCONTINUA));
+        if(tabela.colunas.find(c=>c.operacoes.find(opc=>opc.descricao.tipo==OperacaoTipoEnum.FREQCONTINUA))){
+            tabela.addOperacao(new Operacao(OperacaoTipoEnum.FREQCONTINUA));
         }
     }
 
     private opcRecebeParaOpc(opcRecebe:OpcRecebe,tabela:Tabela):Operacao{
-        const opc = this.opcRepository.getByTipo(opcRecebe.tipo);
+        const opc = new Operacao(opcRecebe.tipo);
         if(opc===undefined){
             throw Error(`sem operação do tipo ${opcRecebe.tipo}`);
         }
         opc.parametros = opcRecebe.parametros;
-        if(opc.tipo == OperacaoTipoEnum.GRAFICO_LIGADO && opc.parametros?.dependeDe!=undefined){
+        if(opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_LIGADO && opc.parametros?.dependeDe!=undefined){
             opc.parametros.dependeDeColuna = tabela.colunas.find(c=>c.nome==opc.parametros.dependeDe)
         }
         return opc;

@@ -1,10 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Entidade } from 'src/app/modelo/entidade/Entidade';
-import { EntidadeAcoes } from 'src/app/modelo/entidade/EntidadeAcoes';
 import { EntidadeTipoEnum } from 'src/app/modelo/entidade/EntidadeTipoEnum';
 import { Coluna } from 'src/app/modelo/entidade/coluna/Coluna';
 import { Tabela } from 'src/app/modelo/entidade/tabela/Tabela';
-import { TabelaAcoes } from 'src/app/modelo/entidade/tabela/TabelaAcoes';
 import { FreqCont } from 'src/app/modelo/freq/FreqCont';
 import { FreqDiscr } from 'src/app/modelo/freq/FreqDiscr';
 import { Operacao } from 'src/app/modelo/operacao/Operacao';
@@ -12,6 +10,7 @@ import { OperacaoTipoEnum } from 'src/app/modelo/operacao/OperacaoTipoEnum';
 import { ArrayUtil } from 'src/app/utils/array-util';
 import { Planilha } from '../Planilha';
 import { TabelaRepository } from 'src/app/repository/tabela.repository';
+import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -32,65 +31,64 @@ export class PlanilhaListaComponent implements OnInit {
   ngOnInit(): void {
 
     if( !this.entidade || !this.opc) return;
-    const entidadeAcoes = new EntidadeAcoes(this.entidade);
     
-    if(this.opc.tipo==OperacaoTipoEnum.LISTA){  
+    if(this.opc.descricao.tipo==OperacaoTipoEnum.LISTA){  
 
-      if(entidadeAcoes.tipo==EntidadeTipoEnum.TABELA){
+      if(this.entidade.tipo==EntidadeTipoEnum.TABELA){
         const tabela  = this.entidade as Tabela;
         this.planilhas = [{
             campos:tabela.colunas.map(c=>c.nome),
-            linhas:ArrayUtil.range(0,entidadeAcoes.numRegistros-1).map(i=>
+            linhas:ArrayUtil.range(0,this.entidade.numRegistros-1).map(i=>
                 tabela.colunas.flatMap(c=>c.registros[i])
             ),
-            titulo:`${entidadeAcoes.tipo} ${this.entidade.nome}`
+            titulo:`${this.entidade.tipo} ${this.entidade.nome}`
         }];
       }
-      if(entidadeAcoes.tipo==EntidadeTipoEnum.COLUNA){
+      if(this.entidade.tipo==EntidadeTipoEnum.COLUNA){
         const coluna = this.entidade as Coluna;
         this.tabelaRepository.findTabela(coluna.nomeTabela).subscribe(tabela=>{
-          const campos = ArrayUtil.distintos([new TabelaAcoes(tabela).colunaControleNome,coluna.nome]);
+          const campos = ArrayUtil.distintos([environment.coluna_id_nome,coluna.nome]);
           this.planilhas = [{
               campos,
-              linhas:ArrayUtil.range(0,entidadeAcoes.numRegistros-1).map(i=>
+              linhas:ArrayUtil.range(0,this.entidade.numRegistros-1).map(i=>
                   tabela.colunas
                   .filter(c=>campos.includes(c.nome))
                   .flatMap(c=>c.registros[i])
               ),
-              titulo:`${entidadeAcoes.tipo} ${this.entidade.nome}`
+              titulo:`${this.entidade.tipo} ${this.entidade.nome}`
           }]
         });
       }
 
     }
 
-    if(this.opc.tipo==OperacaoTipoEnum.FREQDISCRETA){ 
+    if(this.opc.descricao.tipo==OperacaoTipoEnum.FREQDISCRETA){ 
 
-      if(entidadeAcoes.tipo==EntidadeTipoEnum.COLUNA){
+      if(this.entidade.tipo==EntidadeTipoEnum.COLUNA){
         this.planilhas = [this.getFreqDiscrFromColuna(this.entidade as Coluna)]
       }
-      if(entidadeAcoes.tipo==EntidadeTipoEnum.TABELA){
+      if(this.entidade.tipo==EntidadeTipoEnum.TABELA){
         const tabela = this.entidade as Tabela;
         this.planilhas = tabela.colunas
           .filter(
-            c=>c.operacoes.map(opc=>opc.tipo).includes(this.opc.tipo)
-            && (c.nome != tabela.nomeColunaControle || tabela.colunas.length==1)
+            c=>c.operacoes.map(opc=>opc.descricao.tipo).includes(this.opc.descricao.tipo)
+            && (c.nome != environment.coluna_id_nome || tabela.colunas.length==1)
           )
           .map(c=>this.getFreqDiscrFromColuna(c))
       }
 
     }
 
-    if(this.opc.tipo==OperacaoTipoEnum.FREQCONTINUA){ 
-      if(entidadeAcoes.tipo==EntidadeTipoEnum.COLUNA){
+    if(this.opc.descricao.tipo==OperacaoTipoEnum.FREQCONTINUA){ 
+      if(this.entidade.tipo==EntidadeTipoEnum.COLUNA){
         this.planilhas = this.getFreqCont(this.entidade as Coluna);
       }
-      if(entidadeAcoes.tipo==EntidadeTipoEnum.TABELA){
+      if(this.entidade.tipo==EntidadeTipoEnum.TABELA){
         const tabela = this.entidade as Tabela;
         this.planilhas = tabela.colunas
           .filter(
-            c=>c.operacoes.map(opc=>opc.tipo).includes(this.opc.tipo)
-            && c.nome != tabela.nomeColunaControle
+            c=>c.operacoes.map(opc=>opc.descricao.tipo).includes(this.opc.descricao.tipo)
+            && c.nome != environment.coluna_id_nome
           )
           .flatMap(c=>this.getFreqCont(c))
       }
@@ -104,7 +102,7 @@ export class PlanilhaListaComponent implements OnInit {
   private getFreqDiscrFromColuna(coluna:Coluna):Planilha{
     const format2Dec = new Intl.NumberFormat('pt-BR',{style:'decimal',minimumFractionDigits:2,maximumFractionDigits:2});
     const format4Dec = new Intl.NumberFormat('pt-BR',{style:'decimal',minimumFractionDigits:4,maximumFractionDigits:4});
-    const opc = coluna.operacoes.find(op=>op.tipo==OperacaoTipoEnum.FREQDISCRETA);
+    const opc = coluna.operacoes.find(op=>op.descricao.tipo==OperacaoTipoEnum.FREQDISCRETA);
     const freqArray = new FreqDiscr(coluna.registros,opc.parametros?.excluir).freqs;
     const titulo = `Freq Discreta de ${coluna.nome}`;
     const tabelaView:Planilha = {campos:["Valor","Frequência","Proporção","Porcentagem"],linhas:[],titulo};
@@ -131,7 +129,7 @@ export class PlanilhaListaComponent implements OnInit {
           linhas:[],titulo
       };
       coluna.operacoes
-          .filter(opc=>opc.tipo==OperacaoTipoEnum.FREQCONTINUA)
+          .filter(opc=>opc.descricao.tipo==OperacaoTipoEnum.FREQCONTINUA)
           .forEach(opc=>{
             const fc = new FreqCont(coluna.registros as number[],opc.parametros.intervalos,opc.parametros.excluir);
               fc.freqs.forEach(fci=>{

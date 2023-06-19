@@ -1,8 +1,8 @@
 {
     "nomeTabela":"exe-2-4-erros-impressao",
-    "operacoesColuna":[
+    "colunas":[
         {
-            "nomeColuna":"erros",
+            "nome":"erros",
             "operacoes":[
                 {
                     "tipo":"ramosfolhas",

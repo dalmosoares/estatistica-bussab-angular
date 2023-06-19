@@ -1,14 +1,10 @@
-import { Injectable } from "@angular/core";
-import { Operacao } from "../modelo/operacao/Operacao";
+import { Operacao, OperacaoDescricao } from "../modelo/operacao/Operacao";
 import { OperacaoTipoEnum } from "../modelo/operacao/OperacaoTipoEnum";
 import { OperacaoTipoSaidaEnum } from "../modelo/operacao/OperacaoTipoSaidaEnum";
 
-@Injectable({
-    providedIn:'root'
-})
 export class OperacaoRepository{
 
-    private operacoes:Operacao[] = [
+    public static operacoesDescricao:OperacaoDescricao[] = [
         {
             tipo:OperacaoTipoEnum.LISTA,
             tipoSaida:OperacaoTipoSaidaEnum.TABELA,
@@ -77,11 +73,12 @@ export class OperacaoRepository{
         }
     ];
 
-    get operacoesPadrao():Operacao[]{ return this.operacoes.filter(opc=>opc.padrao); }
+    public static operacaoDescricaoPorTipo(tipo:OperacaoTipoEnum):OperacaoDescricao{
+        return this.operacoesDescricao.find(od=>od.tipo===tipo);
+    }
 
-    getByTipo(tipo:OperacaoTipoEnum):Operacao{
-        // Object.create() - FUNÇÃO PURA - SEM EFEITOS COLATERAIS
-        return Object.assign(this.operacoes.find(e=>e.tipo==tipo),{});
+    public static operacoesDescricaoPadrao():OperacaoDescricao[]{
+        return this.operacoesDescricao.filter(od=>od.padrao===true);
     }
 
 }

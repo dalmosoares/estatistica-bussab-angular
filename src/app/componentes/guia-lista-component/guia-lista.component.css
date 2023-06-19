@@ -19,16 +19,3 @@ mat-tab-group{
     display: flex;
     justify-content: center;
 }
-
-#guias h3{
-    padding:5px;
-    margin:0;
-    text-align:center;
-    border-left:1px solid blue;
-    border-right:1px solid blue;
-    border-top:1px solid blue;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(0,0,0,.67);
-}

@@ -1,5 +1,5 @@
 import { ElementRef } from "@angular/core";
-import { Parametros } from "src/app/modelo/operacao/Operacao";
+import { OperacaoParametros } from "src/app/modelo/operacao/Operacao";
 import { OperacaoTipoEnum } from "src/app/modelo/operacao/OperacaoTipoEnum";
 import { CorRepository } from "src/app/repository/cor.repository";
 import { NumeroUtil } from "src/app/utils/numero-util";
@@ -13,7 +13,7 @@ export abstract class GraficoService{
     ctx: CanvasRenderingContext2D;
     coluna:Coluna;
     width = 550;
-    height = 400;
+    height = 450;
     fonte = '12px arial';
     linhaTamanho = 2;
     borda = 20;
@@ -32,11 +32,11 @@ export abstract class GraficoService{
         this.desenhar();
     }
 
-    get parametros():Parametros{ 
+    get parametros():OperacaoParametros{ 
         if(this.operacaoTipo===undefined){
             throw Error(`Operacão não definida: coluna ${this.coluna.nome}`);
         }
-        return this.coluna.operacoes.find(op=>op.tipo===this.operacaoTipo).parametros;
+        return this.coluna.operacoes.find(op=>op.descricao.tipo===this.operacaoTipo).parametros;
     }
 
     get widthUtil():number{ return this.width - 2*this.borda; }

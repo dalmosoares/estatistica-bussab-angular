@@ -3,11 +3,12 @@ import { OperacaoTipoEnum } from "src/app/modelo/operacao/OperacaoTipoEnum";
 
 export class TabelaOpcRecebe{
     nomeTabela:string;
-    operacoesColuna:ColunaOpcRecebe[]
+    operacoes?:OpcRecebe[];
+    colunas?:ColunaOpcRecebe[]
 };
 
 export type ColunaOpcRecebe = {
-    nomeColuna:string;
+    nome:string;
     operacoes:OpcRecebe[]
 };
 

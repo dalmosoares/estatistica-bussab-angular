@@ -1,10 +1,10 @@
 <div id="guias" *ngIf="entidade">
-    <h3>{{entidadeTipo}} {{entidade.nome}}</h3>
+    <app-entidade-dados [entidade]="entidade"></app-entidade-dados>
     <mat-tab-group>
         <mat-tab *ngFor="let tab of tabs" label="{{tab.label}}">
-            <app-planilha-lista *ngIf="tab.opc.tipoSaida===saidaTabela" [entidade]="entidade" [opc]="tab.opc"></app-planilha-lista>
-            <app-grafico-lista *ngIf="tab.opc.tipoSaida===saidaGrafico" [entidade]="entidade" [opc]="tab.opc"></app-grafico-lista>
-            <app-ramosfolhas-lista *ngIf="tab.opc.tipoSaida===saidaRamosfolhas" [entidade]="entidade" [opc]="tab.opc"></app-ramosfolhas-lista>
+            <app-planilha-lista *ngIf="tab.opc.descricao.tipoSaida===saidaTabela" [entidade]="entidade" [opc]="tab.opc"></app-planilha-lista>
+            <app-grafico-lista *ngIf="tab.opc.descricao.tipoSaida===saidaGrafico" [entidade]="entidade" [opc]="tab.opc"></app-grafico-lista>
+            <app-ramosfolhas-lista *ngIf="tab.opc.descricao.tipoSaida===saidaRamosfolhas" [entidade]="entidade" [opc]="tab.opc"></app-ramosfolhas-lista>
         </mat-tab>
     </mat-tab-group>
 </div>

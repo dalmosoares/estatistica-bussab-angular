@@ -1,8 +1,8 @@
 {
     "nomeTabela":"compania-mb",
-    "operacoesColuna":[
+    "colunas":[
         {
-            "nomeColuna":"salarioPorSalMin",
+            "nome":"salarioPorSalMin",
             "operacoes":[
                 {
                     "tipo":"freqcontinua",
@@ -33,7 +33,7 @@
             ]
         },
         {
-            "nomeColuna":"idadeAnos",
+            "nome":"idadeAnos",
             "operacoes":[
                 {
                     "tipo":"freqcontinua",
@@ -52,14 +52,14 @@
             ]
         },
         {
-            "nomeColuna":"grauInstrucao",
+            "nome":"grauInstrucao",
             "operacoes":[
                 {"tipo":"grafico_barra", "parametros":{"yCoordMarca":5}},
                 {"tipo":"grafico_pizza"}
             ]
         },
         {
-            "nomeColuna":"filhos",
+            "nome":"filhos",
             "operacoes":[
                 {
                     "tipo":"freqdiscreta",

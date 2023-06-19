@@ -19,6 +19,7 @@ import { PlanilhaComponent } from './componentes/planilha/planilha-component/pla
 import { PlanilhaListaComponent } from './componentes/planilha/planilha-lista-component/planilha-lista.component';
 import { GraficoListaComponent } from './componentes/grafico/grafico-lista-component/grafico-lista.component';
 import { GraficoComponent } from './componentes/grafico/grafico-component/grafico.component';
+import { EntidadeDadosComponent } from './componentes/entidade/entidade-dados/entidade-dados.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { GraficoComponent } from './componentes/grafico/grafico-component/grafic
     RamosFolhasComponent,
     RamosfolhasListaComponent,
     HomeComponent,
-    CarregarJsonTabelaOpcComponent
+    CarregarJsonTabelaOpcComponent,
+    EntidadeDadosComponent
   ],
   imports: [
     BrowserModule,

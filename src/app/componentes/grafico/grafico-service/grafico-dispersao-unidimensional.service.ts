@@ -63,7 +63,7 @@ export class DispersaoUnidimensionalService extends GraficoService{
         this.yEscala = this.freqMax/this.heightUtil;
     }
 
-    gerarItems(): void {
+    override gerarItems(): void {
         this.items = this.dados.map(f=>
             ({x:(f.valor/this.xEscala),freq:f})
         );

@@ -1,8 +1,8 @@
 {
-    "nomeTabela":"cd04-saopaulo-popuicao-temperatura",
-    "operacoesColuna":[
+    "nomeTabela":"cd04-saopaulo-poluicao-temperatura",
+    "colunas":[
         {
-            "nomeColuna":"temperatura",
+            "nome":"temperatura",
             "operacoes":[
                 {
                     "tipo":"freqcontinua",

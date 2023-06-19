@@ -3,6 +3,8 @@ import { OperacaoTipoEnum } from "src/app/modelo/operacao/OperacaoTipoEnum";
 import { GraficoService } from "./grafico.service";
 import { Coluna } from "src/app/modelo/entidade/coluna/Coluna";
 import { TabelaRepository } from "src/app/repository/tabela.repository";
+import { ArrayUtil } from "src/app/utils/array-util";
+import { environment } from "src/environments/environment";
 
 type GraficoItem = {
     x:number,
@@ -27,9 +29,6 @@ export class GraficoLigadoService extends GraficoService{
     items:GraficoItem[];
     rotuloDesloc = 15;
 
-    altura=50;
-    raio=4;
-
     valorMin:number; 
     valorMax:number;
 
@@ -44,9 +43,27 @@ export class GraficoLigadoService extends GraficoService{
     iniciarLocal(){        
     }
 
-    gerarItems(): void {
-        console.log("GraficoLigadoService gerarItems",this.dependeDe);
+    override gerarItems(): void {
+        console.log("GraficoLigadoService gerarItems inicio");
+        const ay = this.coluna.registros as number[];
+        const ax = this.dependeDe.registros as number[];
+        this.items = ArrayUtil.range(0,ay.length-1).map(i=>({x:ax[i],y:ay[i]}));
+        this.gerarEscalaX();
+        this.gerarEscalaY();
+        console.log(this.items[0]);
+        console.log("GraficoLigadoService gerarItems fim");
+    }
 
+    private gerarEscalaX(){
+        const max = Math.max(...this.items.map(item=>item.x));
+        const min = 0;
+        this.xEscala = (max-min)/this.widthUtil;
+    }
+
+    private gerarEscalaY(){
+        const max = Math.max(...this.items.map(item=>item.y));
+        const min = Math.min(...this.items.map(item=>item.y));
+        this.yEscala = (max-min)/this.heightUtil;
     }
 
     override eixoX(): void {
@@ -72,17 +89,22 @@ export class GraficoLigadoService extends GraficoService{
     yMarcarRotular(): void {
     }
 
+    override desenhar(){
+        super.desenhar();
+    }
+    
     override desenharItems(){
-
+        this.items.forEach(item=>{
+            this.desenharItem(item);
+        });
     }
 
-    private desenharItem1(item:GraficoItem){
-
+    private desenharItem(item:GraficoItem){
+        this.ctx.beginPath();
+        this.ctx.arc(item.x/this.xEscala,item.y/this.yEscala,environment.pontoRaio/this.xEscala,0,2*Math.PI);
+        this.ctx.fill();
     }
 
-    private desenharItemRotulo(item:GraficoItem){
-
-    }
 
     yRotular(num:number){
 

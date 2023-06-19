@@ -1,8 +1,8 @@
 {
     "nomeTabela":"cd03-notas",
-    "operacoesColuna":[
+    "colunas":[
         {
-            "nomeColuna":"nota",
+            "nome":"nota",
             "operacoes":[
                 {
                     "tipo":"freqcontinua",

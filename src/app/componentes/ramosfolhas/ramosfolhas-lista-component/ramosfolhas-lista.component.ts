@@ -1,6 +1,5 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Entidade } from 'src/app/modelo/entidade/Entidade';
-import { EntidadeAcoes } from 'src/app/modelo/entidade/EntidadeAcoes';
 import { EntidadeTipoEnum } from 'src/app/modelo/entidade/EntidadeTipoEnum';
 import { Coluna } from 'src/app/modelo/entidade/coluna/Coluna';
 import { Operacao } from 'src/app/modelo/operacao/Operacao';
@@ -33,7 +32,7 @@ export class RamosfolhasListaComponent implements OnChanges {
   }
 
   get entidadeTipoTabela():boolean{
-    return new EntidadeAcoes(this.entidade).tipo == EntidadeTipoEnum.TABELA;
+    return this.entidade.tipo == EntidadeTipoEnum.TABELA;
   }
 
   getRamosFolhasLista(){
@@ -43,9 +42,9 @@ export class RamosfolhasListaComponent implements OnChanges {
       );
       const colunas = this.entidadeTipoTabela?tabela.colunas:[(this.entidade as Coluna)];
       colunas.filter(
-        coluna=>coluna.operacoes.find(opc1=>opc1.tipo==this.opc.tipo)
+        coluna=>coluna.operacoes.find(opc1=>opc1.descricao.tipo==this.opc.descricao.tipo)
       ).forEach(coluna=>{
-        const opc = coluna.operacoes.find(opc1=>opc1.tipo==this.opc.tipo);
+        const opc = coluna.operacoes.find(opc1=>opc1.descricao.tipo==this.opc.descricao.tipo);
         this.ramosFolhasLista.push(
           this.ramosFolhas(
             coluna,

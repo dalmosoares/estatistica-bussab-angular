@@ -1,8 +1,8 @@
 {
     "nomeTabela":"cd02-populacoes-municipios-brasil",
-    "operacoesColuna":[
+    "colunas":[
         {
-            "nomeColuna":"populacao",
+            "nome":"populacao",
             "operacoes":[
                 {
                     "tipo":"freqcontinua",

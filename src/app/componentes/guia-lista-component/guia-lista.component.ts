@@ -1,7 +1,6 @@
 import { Component, DoCheck, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { MatTabGroup } from '@angular/material/tabs';
 import { Entidade } from 'src/app/modelo/entidade/Entidade';
-import { EntidadeAcoes } from 'src/app/modelo/entidade/EntidadeAcoes';
 import { EntidadeTipoEnum } from 'src/app/modelo/entidade/EntidadeTipoEnum';
 import { Operacao } from 'src/app/modelo/operacao/Operacao';
 import { OperacaoTipoSaidaEnum } from 'src/app/modelo/operacao/OperacaoTipoSaidaEnum';
@@ -42,11 +41,11 @@ export class GuiaListaComponent implements OnChanges,DoCheck {
   }
   ngOnChanges(changes: SimpleChanges): void {
     if(this.entidade!=undefined){
-      this.entidadeTipo = new EntidadeAcoes(this.entidade).tipo;
+      this.entidadeTipo = this.entidade.tipo;
       this.tabs = this.entidade.operacoes.map((opc,idx) => ({
         'opc':opc,
         'indice':idx,
-        'label':`${opc.nome}`
+        'label':`${opc.descricao.nome}`
       }));
     }
   }

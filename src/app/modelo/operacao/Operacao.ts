@@ -1,16 +1,25 @@
+import { OperacaoRepository } from "src/app/repository/operacao.repository";
 import { Coluna } from "../entidade/coluna/Coluna";
 import { OperacaoTipoEnum } from "./OperacaoTipoEnum";
 import { OperacaoTipoSaidaEnum } from "./OperacaoTipoSaidaEnum";
 
-export interface Operacao{
+export class Operacao{
+    descricao:OperacaoDescricao;
+    parametros?:OperacaoParametros;
+
+    constructor(tipo:OperacaoTipoEnum){
+        this.descricao = OperacaoRepository.operacaoDescricaoPorTipo(tipo);
+    }
+}
+
+export type OperacaoDescricao = {
     nome:string;
     tipo:OperacaoTipoEnum;
     tipoSaida:OperacaoTipoSaidaEnum;
-    parametros?:Parametros;
     padrao:boolean;
 }
 
-export type Parametros = {
+export type OperacaoParametros = {
     intervalos?:number[];
     excluir?:any;
     marcarAusentes?:boolean;
