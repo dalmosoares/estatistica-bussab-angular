@@ -33,11 +33,12 @@ export class GraficoLigadoService extends GraficoService{
     valorMax:number;
 
     constructor(
-        coluna:Coluna,
         canvasEl: ElementRef<HTMLCanvasElement>,
+        operacaoTipo:OperacaoTipoEnum,
+        coluna:Coluna,
         dependeDe:Coluna
     ){
-        super(canvasEl,coluna,dependeDe);
+        super(canvasEl,operacaoTipo,coluna,dependeDe);
     }
 
     iniciarLocal(){        

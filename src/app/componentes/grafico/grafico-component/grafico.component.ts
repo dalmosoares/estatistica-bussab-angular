@@ -31,50 +31,58 @@ export class GraficoComponent implements AfterViewInit {
           throw new Error(`Grafico ligado sem parâmetro 'dependeDeColunas': coluna ${this.grafico.coluna.nome}`);
         }
         this.graficoService = new GraficoLigadoService(
-          this.grafico.coluna,
           this.canvasEl,
+          this.opc.descricao.tipo,
+          this.grafico.coluna,
           this.opc.parametros.dependeDeColuna
         );
       }
       if(this.opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_BARRA){
         this.graficoService = new GraficoBarraService(
-          this.grafico.coluna,
-          this.canvasEl
+          this.canvasEl,
+          this.opc.descricao.tipo,
+          this.grafico.coluna
         );
       }
       if(this.opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_PIZZA){
         this.graficoService = new GraficoPizzaService(
-          this.grafico.coluna,
-          this.canvasEl
-        );
+          this.canvasEl,
+          this.opc.descricao.tipo,
+          this.grafico.coluna
+        );        
       }
       if(this.opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL1){
         this.graficoService = new DispersaoUnidimensionalService(
-          this.grafico.coluna,
           this.canvasEl,
+          this.opc.descricao.tipo,
+          this.grafico.coluna,
           1
         );
       }
       if(this.opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL2){
         this.graficoService = new DispersaoUnidimensionalService(
-          this.grafico.coluna,
           this.canvasEl,
+          this.opc.descricao.tipo,
+          this.grafico.coluna,
           2
         );
       }
       if(this.opc.descricao.tipo == OperacaoTipoEnum.GRAFICO_DISPERSAO_UNIDIMENSIONAL3){
         this.graficoService = new DispersaoUnidimensionalService(
-          this.grafico.coluna,
           this.canvasEl,
+          this.opc.descricao.tipo,
+          this.grafico.coluna,
           3
         );
       }
       if(this.opc.descricao.tipo == OperacaoTipoEnum.HISTOGRAMA){
         this.graficoService = new GraficoHistogramaService(
-          this.grafico.coluna,
-          this.canvasEl
+          this.canvasEl,
+          this.opc.descricao.tipo,
+          this.grafico.coluna
         );
       }
+      this.graficoService.desenhar();
     }catch(erro){
       console.error(`ERRO: ${erro.message}`);
     }

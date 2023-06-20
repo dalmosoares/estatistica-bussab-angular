@@ -4,7 +4,6 @@ import { FreqDiscrItem } from "src/app/modelo/freq/FreqDiscrItem";
 import { GraficoService } from "./grafico.service";
 import { OperacaoTipoEnum } from "src/app/modelo/operacao/OperacaoTipoEnum";
 import { FreqCont } from "src/app/modelo/freq/FreqCont";
-import { Grafico } from "../grafico-modelo/Grafico";
 import { Coluna } from "src/app/modelo/entidade/coluna/Coluna";
 
 type GraficoBarraItem = {
@@ -18,14 +17,14 @@ type GraficoBarraItem = {
 export class GraficoBarraService extends GraficoService{
 
     protected override operacaoTipo=OperacaoTipoEnum.GRAFICO_BARRA;
-    override borda = 30;
+    override borda:number  = 30;
     marcaTamanho = 8;
 
     dados:FreqDiscrItem[];
     retanguloDistancia = 20;
     graficoItems:GraficoBarraItem[];
 
-    rotuloDistancia=5;
+    rotuloDistancia = 5;
     rotuloDesloc = 15;
     YMaxVirtual:number;
     YMaxVirtualTolerancia = 1;
@@ -34,10 +33,11 @@ export class GraficoBarraService extends GraficoService{
     yCoordMarca = 1;
 
     constructor(
-        coluna:Coluna,
-        canvasEl: ElementRef<HTMLCanvasElement>
+        canvasEl: ElementRef<HTMLCanvasElement>,
+        operacaoTipo:OperacaoTipoEnum,
+        coluna:Coluna
     ){
-        super(canvasEl,coluna);
+        super(canvasEl,operacaoTipo,coluna);
         this.dados = new FreqDiscr(this.coluna.registros,this.parametros?.excluir).freqs;  
         if(this.parametros?.yCoordDiv!=undefined){
             this.yCoordDiv = this.parametros?.yCoordDiv;

@@ -21,9 +21,7 @@ export class GraficoListaComponent implements OnInit{
 
   constructor(
     private tabelaRepository:TabelaRepository
-  ) { 
-    console.log("GraficoListaComponent");
-  }
+  ) {}
 
   ngOnInit(): void {
     this.tabelaRepository.tabelas.subscribe(

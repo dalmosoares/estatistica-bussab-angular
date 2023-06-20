@@ -37,11 +37,12 @@ export class DispersaoUnidimensionalService extends GraficoService{
     subTipo:number;
 
     constructor(
-        coluna:Coluna,
         canvasEl: ElementRef<HTMLCanvasElement>,
+        operacaoTipo:OperacaoTipoEnum,
+        coluna:Coluna,
         subTipo:number
     ){
-        super(canvasEl,coluna);
+        super(canvasEl,operacaoTipo,coluna);
         this.subTipo = subTipo;
     }
 

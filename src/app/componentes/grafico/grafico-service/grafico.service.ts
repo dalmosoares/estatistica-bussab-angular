@@ -8,6 +8,7 @@ import { Coluna } from "src/app/modelo/entidade/coluna/Coluna";
 export abstract class GraficoService{
 
     protected operacaoTipo:OperacaoTipoEnum;
+    borda:number = 20;
     protected corRepository = new CorRepository();
     canvasEl: ElementRef<HTMLCanvasElement>;
     ctx: CanvasRenderingContext2D;
@@ -16,20 +17,20 @@ export abstract class GraficoService{
     height = 450;
     fonte = '12px arial';
     linhaTamanho = 2;
-    borda = 20;
     casasDecimais=2;
     formatador = NumeroUtil.formatador(this.casasDecimais);
     dependeDe?:Coluna;
     
     constructor(
         canvasEl: ElementRef<HTMLCanvasElement>,
+        operacaoTipo:OperacaoTipoEnum,
         coluna:Coluna,
         dependeDe?:Coluna
     ){
         this.canvasEl = canvasEl;
+        this.operacaoTipo = operacaoTipo;
         this.coluna = coluna;
         this.dependeDe = dependeDe;
-        this.desenhar();
     }
 
     get parametros():OperacaoParametros{ 
@@ -46,10 +47,6 @@ export abstract class GraficoService{
         this.ctx.setTransform(1, 0, 0, 1, 0, 0);
         this.ctx.scale(1,-1);
         this.ctx.translate(this.borda,-1*this.height + this.borda);
-    }
-
-    afterViewInit(){
-        this.desenhar();
     }
 
     desenhar(){

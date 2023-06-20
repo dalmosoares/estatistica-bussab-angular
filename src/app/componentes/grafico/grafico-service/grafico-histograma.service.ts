@@ -50,10 +50,11 @@ export class GraficoHistogramaService extends GraficoService{
     tolerancia=1e-5;
 
     constructor(
-        coluna:Coluna,
-        canvasEl: ElementRef<HTMLCanvasElement>
+        canvasEl:ElementRef<HTMLCanvasElement>,
+        operacaoTipo:OperacaoTipoEnum,
+        coluna:Coluna
     ){
-        super(canvasEl,coluna);
+        super(canvasEl,operacaoTipo,coluna);
     }
 
     override iniciarLocal(): void {

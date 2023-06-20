@@ -33,10 +33,11 @@ export class GraficoPizzaService extends GraficoService{
     rotuloDistancia:number;
 
     constructor(
-        coluna:Coluna,
-        canvasEl: ElementRef<HTMLCanvasElement>
+        canvasEl: ElementRef<HTMLCanvasElement>,
+        operacaoTipo:OperacaoTipoEnum,
+        coluna:Coluna
     ){
-        super(canvasEl,coluna);
+        super(canvasEl,operacaoTipo,coluna);
     }
 
     iniciarLocal(): void {
